@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Octalve Suite (Local Dev Scaffold)
 
 This folder is a "resurrected" local React + Vite scaffold built around the UI code you exported from Base44.
@@ -25,3 +26,7 @@ Data is stored in `localStorage` (see `src/api/base44Client.js`).
 ## Next
 
 Swap `src/api/base44Client.js` to call your real Node.js backend (REST or GraphQL) without rewriting your UI.
+=======
+# octalve-suite
+Streamline project delivery from creation to completion, ensuring seamless collaboration between teams and clients.
+>>>>>>> f5212dc24d2dc143ce29b379940183bb3616d971
