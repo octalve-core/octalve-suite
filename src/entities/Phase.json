@@ -1,0 +1,52 @@
+{
+  "name": "Phase",
+  "type": "object",
+  "properties": {
+    "project_id": {
+      "type": "string",
+      "description": "Reference to project"
+    },
+    "name": {
+      "type": "string",
+      "description": "Phase name"
+    },
+    "order": {
+      "type": "number",
+      "description": "Phase sequence order"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "not_started",
+        "in_progress",
+        "awaiting_approval",
+        "approved",
+        "changes_requested"
+      ],
+      "default": "not_started"
+    },
+    "description": {
+      "type": "string"
+    },
+    "due_date": {
+      "type": "string",
+      "format": "date"
+    },
+    "approved_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "approved_by": {
+      "type": "string"
+    },
+    "assigned_to": {
+      "type": "string",
+      "description": "Email of assigned team member"
+    },
+    "assigned_to_name": {
+      "type": "string",
+      "description": "Name of assigned team member"
+    }
+  },
+  "required": ["project_id", "name", "order"]
+}

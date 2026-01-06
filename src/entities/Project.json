@@ -1,0 +1,74 @@
+{
+  "name": "Project",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Project name"
+    },
+    "client_name": {
+      "type": "string",
+      "description": "Client company name"
+    },
+    "client_email": {
+      "type": "string",
+      "description": "Primary client contact email"
+    },
+    "suite_type": {
+      "type": "string",
+      "enum": ["launch", "impact", "growth", "partner"],
+      "description": "Package type"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "active",
+        "awaiting_approval",
+        "at_risk",
+        "completed",
+        "archived"
+      ],
+      "default": "active"
+    },
+    "progress_percentage": {
+      "type": "number",
+      "default": 0
+    },
+    "target_completion_date": {
+      "type": "string",
+      "format": "date"
+    },
+    "assigned_pm": {
+      "type": "string",
+      "description": "PM email"
+    },
+    "assigned_team": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "email": {
+            "type": "string"
+          },
+          "role": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "internal_notes": {
+      "type": "string"
+    },
+    "tags": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "project_code": {
+      "type": "string",
+      "description": "Unique code for client access"
+    }
+  },
+  "required": ["name", "client_name", "client_email", "suite_type"]
+}

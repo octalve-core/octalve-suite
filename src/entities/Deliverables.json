@@ -1,0 +1,39 @@
+{
+  "name": "Deliverable",
+  "type": "object",
+  "properties": {
+    "phase_id": {
+      "type": "string",
+      "description": "Reference to phase"
+    },
+    "project_id": {
+      "type": "string",
+      "description": "Reference to project"
+    },
+    "name": {
+      "type": "string",
+      "description": "Deliverable name"
+    },
+    "link": {
+      "type": "string",
+      "description": "URL to deliverable"
+    },
+    "link_type": {
+      "type": "string",
+      "enum": ["figma", "drive", "web", "other"],
+      "default": "other"
+    },
+    "status": {
+      "type": "string",
+      "enum": ["draft", "ready_for_review", "updated", "approved"],
+      "default": "draft"
+    },
+    "description": {
+      "type": "string"
+    },
+    "order": {
+      "type": "number"
+    }
+  },
+  "required": ["phase_id", "project_id", "name"]
+}
