@@ -1,5 +1,6 @@
 "use client";
 
+import { KindeProvider } from "@kinde-oss/kinde-auth-nextjs";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { useState } from "react";
 
@@ -18,8 +19,10 @@ export function Providers({ children }) {
     );
 
     return (
-        <QueryClientProvider client={queryClient}>
-            {children}
-        </QueryClientProvider>
+        <KindeProvider>
+            <QueryClientProvider client={queryClient}>
+                {children}
+            </QueryClientProvider>
+        </KindeProvider>
     );
 }

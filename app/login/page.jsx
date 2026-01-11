@@ -1,8 +1,6 @@
 "use client";
 
-import { useState } from "react";
-import { useRouter } from "next/navigation";
-import { api } from "@/lib/api/client";
+import { LoginLink, RegisterLink } from "@kinde-oss/kinde-auth-nextjs/components";
 import {
     Card,
     CardContent,
@@ -11,43 +9,8 @@ import {
     CardDescription,
 } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
 
 export default function LoginPage() {
-    const router = useRouter();
-    const [email, setEmail] = useState("admin@octalve.local");
-    const [name, setName] = useState("Octalve Admin");
-    const [role, setRole] = useState("admin");
-    const [loading, setLoading] = useState(false);
-    const [error, setError] = useState("");
-
-    const quickFill = (r) => {
-        setRole(r);
-        if (r === "admin") {
-            setEmail("admin@octalve.local");
-            setName("Octalve Admin");
-        } else {
-            setEmail("client@octalve.local");
-            setName("Demo Client");
-        }
-    };
-
-    const onLogin = async (e) => {
-        e.preventDefault();
-        setLoading(true);
-        setError("");
-
-        try {
-            await api.auth.login({ email, full_name: name, role });
-            router.replace(role === "admin" ? "/overview" : "/dashboard");
-        } catch (err) {
-            setError(err.message || "Login failed");
-        } finally {
-            setLoading(false);
-        }
-    };
-
     return (
         <div className="min-h-screen bg-gradient-to-b from-white to-slate-50 flex items-center justify-center p-4">
             <Card className="w-full max-w-md">
@@ -62,56 +25,32 @@ export default function LoginPage() {
                         Sign in to access your project dashboard
                     </CardDescription>
                 </CardHeader>
-                <CardContent>
-                    <div className="flex gap-2 mb-6">
-                        <Button
-                            type="button"
-                            variant={role === "admin" ? "default" : "outline"}
-                            className="flex-1"
-                            onClick={() => quickFill("admin")}
-                        >
-                            Admin
+                <CardContent className="space-y-4">
+                    <LoginLink>
+                        <Button className="w-full" size="lg">
+                            Sign in
                         </Button>
-                        <Button
-                            type="button"
-                            variant={role === "client" ? "default" : "outline"}
-                            className="flex-1"
-                            onClick={() => quickFill("client")}
-                        >
-                            Client
-                        </Button>
+                    </LoginLink>
+
+                    <div className="relative">
+                        <div className="absolute inset-0 flex items-center">
+                            <span className="w-full border-t" />
+                        </div>
+                        <div className="relative flex justify-center text-xs uppercase">
+                            <span className="bg-white px-2 text-slate-500">
+                                Or
+                            </span>
+                        </div>
                     </div>
 
-                    {error && (
-                        <div className="mb-4 p-3 bg-red-50 border border-red-200 rounded-lg text-red-700 text-sm">
-                            {error}
-                        </div>
-                    )}
-
-                    <form className="space-y-4" onSubmit={onLogin}>
-                        <div className="space-y-2">
-                            <Label>Full name</Label>
-                            <Input
-                                value={name}
-                                onChange={(e) => setName(e.target.value)}
-                                placeholder="Your name"
-                            />
-                        </div>
-                        <div className="space-y-2">
-                            <Label>Email</Label>
-                            <Input
-                                value={email}
-                                onChange={(e) => setEmail(e.target.value)}
-                                placeholder="you@company.com"
-                            />
-                        </div>
-                        <Button type="submit" className="w-full" disabled={loading}>
-                            {loading ? "Signing in..." : "Sign in"}
+                    <RegisterLink>
+                        <Button variant="outline" className="w-full" size="lg">
+                            Create an account
                         </Button>
-                    </form>
+                    </RegisterLink>
 
-                    <p className="text-xs text-slate-500 mt-4">
-                        Demo mode: Choose Admin or Client to explore the interface.
+                    <p className="text-xs text-slate-500 text-center mt-4">
+                        Secure authentication powered by Kinde
                     </p>
                 </CardContent>
             </Card>

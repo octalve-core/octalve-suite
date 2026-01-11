@@ -15,6 +15,7 @@
     "seed": "node prisma/seed.js"
   },
   "dependencies": {
+    "@kinde-oss/kinde-auth-nextjs": "^2.11.0",
     "@prisma/client": "^6.0.0",
     "@radix-ui/react-accordion": "^1.2.3",
     "@radix-ui/react-collapsible": "^1.1.4",
