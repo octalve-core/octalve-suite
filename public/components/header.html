@@ -1,0 +1,174 @@
+<!-- components/header.html -->
+<header id="siteHeader" class="fixed top-0 left-0 right-0 w-full z-50">
+    <!-- Promo bar -->
+    <div class="w-full bg-[var(--promo-bg)]">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex items-center justify-between gap-4 py-3">
+                <!-- Left promo art -->
+                <div class="hidden sm:flex items-center gap-3 min-w-[120px]">
+                    <img src="/brand/powercharge.png" alt="Promo art" class="h-10 w-auto object-contain" />
+                </div>
+
+                <!-- Center promo text -->
+                <div class="flex-1 text-center font-primary">
+                    <span class="text-base sm:text-lg font-extrabold text-black/90">
+                        New year Sale: Save up to
+                        <span class="text-[color:var(--primary)]">#80,000</span>
+                        on any Octalve Suite plan!
+                    </span>
+                </div>
+
+                <!-- Right countdown + CTA -->
+                <!-- <div class="flex items-center gap-3 font-primary">
+                    <div class="hidden md:flex items-center gap-2">
+                        <div class="bg-white rounded-xl px-3 py-2 text-center shadow-sm">
+                            <div class="text-lg font-extrabold leading-none">28</div>
+                            <div class="text-[11px] font-bold text-black/70">Days</div>
+                        </div>
+                        <div class="bg-white rounded-xl px-3 py-2 text-center shadow-sm">
+                            <div class="text-lg font-extrabold leading-none">15</div>
+                            <div class="text-[11px] font-bold text-black/70">Hours</div>
+                        </div>
+                        <div class="bg-white rounded-xl px-3 py-2 text-center shadow-sm">
+                            <div class="text-lg font-extrabold leading-none">33</div>
+                            <div class="text-[11px] font-bold text-black/70">Minutes</div>
+                        </div>
+                        <div class="bg-white rounded-xl px-3 py-2 text-center shadow-sm">
+                            <div class="text-lg font-extrabold leading-none">35</div>
+                            <div class="text-[11px] font-bold text-black/70">Seconds</div>
+                        </div>
+                    </div> -->
+
+                <!-- Static countdown blocks -->
+
+                <div class="hidden md:flex items-center gap-2">
+                    <div class="bg-white rounded-xl px-3 py-2 text-center shadow-sm">
+                        <div id="cdDays" class="text-lg font-extrabold leading-none">00</div>
+                        <div class="text-[11px] font-bold text-black/70">Days</div>
+                    </div>
+
+                    <div class="bg-white rounded-xl px-3 py-2 text-center shadow-sm">
+                        <div id="cdHours" class="text-lg font-extrabold leading-none">00</div>
+                        <div class="text-[11px] font-bold text-black/70">Hours</div>
+                    </div>
+
+                    <div class="bg-white rounded-xl px-3 py-2 text-center shadow-sm">
+                        <div id="cdMinutes" class="text-lg font-extrabold leading-none">00</div>
+                        <div class="text-[11px] font-bold text-black/70">Minutes</div>
+                    </div>
+
+                    <div class="bg-white rounded-xl px-3 py-2 text-center shadow-sm">
+                        <div id="cdSeconds" class="text-lg font-extrabold leading-none">00</div>
+                        <div class="text-[11px] font-bold text-black/70">Seconds</div>
+                    </div>
+                </div>
+
+
+
+
+
+
+
+
+
+
+                <a href="/Startnow/"
+                    class="inline-flex items-center justify-center rounded-full border border-black/70 px-5 py-2 text-sm font-bold hover:bg-white/40 transition">
+                    Claim 10% Off
+                </a>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <!-- Main nav bar -->
+    <div id="navShell" class="w-full bg-[#E5ECFF] transition-all duration-200 border-b border-transparent shadow-lg">
+        <div class="max-w-7xl mx-auto px-4">
+            <!-- Sign-in row (VISIBLE at top, HIDES on scroll) -->
+            <div id="signinRow" class="hidden md:flex justify-end pt-4 font-secondary transition-all duration-200">
+                <div class="text-sm text-black/70">
+                    Already Have an Account?
+                    <a href="#" class="font-extrabold text-black hover:underline">
+                        Sign In <span aria-hidden="true">›</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Main row (taller at top, compress on scroll) -->
+            <div id="mainRow" class="flex items-center justify-between gap-5 py-6 transition-all duration-200">
+                <!-- Logo -->
+                <a href="/" class="flex items-center gap-3">
+                    <img id="brandLogo" src="/brand/logo/Octalve Suite.png" alt="Octalve Suite™ Logo"
+                        class="h-9 w-auto object-contain transition-all duration-200" />
+                </a>
+
+                <!-- Desktop nav links -->
+                <nav class="hidden lg:flex items-center gap-10 font-primary">
+                    <a href="/" class="font-bold text-black/90 hover:text-black">Home</a>
+                    <a href="/Launchsuite/" class="font-bold text-black/90 hover:text-black">Launch</a>
+                    <a href="/Impactsuite/" class="font-bold text-black/90 hover:text-black">Impact</a>
+                    <!-- <a href="/Growthsuite/" class="font-bold text-black/90 hover:text-black">Growth</a> -->
+
+                    <!-- <div class="relative group"> -->
+                    <!-- <a href="#" class="inline-flex items-center gap-2 font-bold text-black/90 hover:text-black">
+                        Partner
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                            <path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                    </a>
+
+                    <div class="absolute left-0 top-full mt-3 hidden group-hover:block">
+                        <div class="min-w-[220px] rounded-2xl bg-white shadow-lg border border-black/10 p-2">
+                            <a class="block rounded-xl px-3 py-2 text-sm font-semibold hover:bg-black/5"
+                                href="#">White-Label</a>
+                            <a class="block rounded-xl px-3 py-2 text-sm font-semibold hover:bg-black/5"
+                                href="#">Referral</a>
+                        </div>
+                    </div> 
+                    <!-- </div> -->
+
+                    <a href="/Pricing/" class="font-bold text-black/90 hover:text-black">Pricing</a>
+                    <a href="/contact/" class="font-bold text-black/90 hover:text-black">Contact</a>
+                </nav>
+
+                <!-- Right buttons -->
+                <div class="hidden md:flex items-center gap-4 font-primary">
+                    <a href="/Startnow/"
+                        class="inline-flex items-center justify-center rounded-full bg-white/70 text-black px-7 py-3 font-bold border border-black/10 hover:bg-white transition">
+                        Start Now
+                    </a>
+
+                    <a href="/Startnow/"
+                        class="inline-flex items-center justify-center gap-2 rounded-full bg-black text-white px-7 py-3 font-bold shadow-sm hover:opacity-90 transition">
+                        Free 30min. Call <span aria-hidden="true">›</span>
+                    </a>
+
+                </div>
+
+                <!-- Mobile menu button -->
+                <button id="navToggle" type="button"
+                    class="lg:hidden inline-flex items-center justify-center rounded-full border border-black/15 bg-white/60 px-4 py-2 font-primary font-extrabold"
+                    aria-expanded="false" aria-controls="mobileNav">
+                    Menu
+                </button>
+            </div>
+
+            <!-- Mobile nav -->
+            <div id="mobileNav" class="lg:hidden hidden pb-6">
+                <div class="rounded-3xl bg-white/70 border border-black/10 p-4 font-primary">
+                    <a class="block px-3 py-3 rounded-2xl font-bold hover:bg-black/5" href="/">Home</a>
+                    <a class="block px-3 py-3 rounded-2xl font-bold hover:bg-black/5" href="/Launchsuite/">Launch</a>
+                    <a class="block px-3 py-3 rounded-2xl font-bold hover:bg-black/5" href="/Impactsuite/">Impact</a>
+                    <!-- <a class="block px-3 py-3 rounded-2xl font-bold hover:bg-black/5" href="/Growthsuite/">Growth</a>
+                    <a class="block px-3 py-3 rounded-2xl font-bold hover:bg-black/5" href="/Partnersuite/">Partner</a> -->
+                    <a class="block px-3 py-3 rounded-2xl font-bold hover:bg-black/5" href="/Pricing/">Pricing</a>
+                    <a class="block px-3 py-3 rounded-2xl font-bold hover:bg-black/5" href="/contact/">Contact</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Tailwind safelist (important if you're building Tailwind with Vite/JIT) -->
+    <div class="hidden py-4 py-6 h-8 h-9 border-black/10 border-transparent shadow-sm shadow-none"></div>
+</header>

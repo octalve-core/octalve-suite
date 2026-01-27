@@ -1,0 +1,2468 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Octalve Suite™ | Home </title>
+    <link rel="icon" type="image/png" href="/brand/Octalveicon.png" />
+
+    <!-- Google Font: Barlow (page-wide) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Material Symbols (icons) -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,500,0,0" />
+
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+        :root {
+            --promo-bg: #dbe7ff;
+            --nav-bg: #fbf1c8;
+            --text: #0b1220;
+            --muted: #55627a;
+            --border: rgba(15, 23, 42, .12);
+
+            --primary: #0064E0;
+            --btn-dark: #0b0b0c;
+        }
+
+        html,
+        body {
+            font-family: "Barlow", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+            color: var(--text);
+        }
+
+        .icon {
+            font-family: "Material Symbols Rounded";
+            font-weight: 500;
+            font-style: normal;
+            line-height: 1;
+            display: inline-flex;
+            vertical-align: middle;
+        }
+
+        .soft-border {
+            border: 1px solid var(--border);
+        }
+
+        .container-max {
+            max-width: 1180px;
+        }
+    </style>
+</head>
+
+
+
+<body class="bg-white text-black">
+    <!-- HEADER INCLUDE -->
+    <div data-include="/components/header.html"></div>
+
+    <!-- PAGE CONTENT -->
+    <main>
+        <!-- Your sections go here -->
+    </main>
+
+    <!-- Include loader -->
+    <script src="/assets/include.js" defer></script>
+    <script src="/assets/layout.js" defer></script>
+
+
+    <!-- PAGE CONTENT BELOW -->
+
+
+
+    <!-- HERO -->
+
+    <section class="w-full" style="background:#000A16;">
+        <div class="mx-auto container-max px-4 py-12 md:py-16">
+            <div class="grid lg:grid-cols-2 gap-10 lg:gap-14 items-center">
+
+                <!-- LEFT: Copy -->
+                <div class="space-y-6">
+                    <p class="text-sm md:text-base font-semibold text-white/70">
+                        Octalve Suite™ is for Owners, Founders &amp; Creators.
+                    </p>
+
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-tight">
+                        One platform, Zero stress.
+                    </h1>
+
+                    <p class="text-base md:text-lg text-white/75 max-w-xl">
+                        is our all-in-one production house designed to take you from "idea" to "market-ready." Whether
+                        you are a solo founder, a
+                        growing NGO, or an agency looking for a reliable production partner, our specialized suites
+                        provide the foundation you
+                        need.
+                        <br class="hidden sm:block" />
+                        Launch faster, grow smarter, and manage everything in one place with Octalve Suite™.
+                    </p>
+
+                    <!-- CTA Buttons -->
+                    <div class="flex flex-col sm:flex-row gap-3 sm:gap-4 pt-2">
+                        <!-- <a href="#"
+                            class="inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 text-sm font-extrabold text-white transition hover:opacity-90"
+                            style="background:#0064E0;">
+                            Create a Free Account
+                            <span class="icon text-base">chevron_right</span>
+                        </a> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                        <!-- Button -->
+                        <a href="#" id="openCalendly"
+                            class="inline-flex items-center justify-center gap-2 rounded-full bg-black text-white px-7 py-3 font-bold shadow-sm hover:opacity-90 transition"
+                            style="background:#0064E0;">
+                            Free 30min. Call <span aria-hidden="true">›</span>
+                        </a>
+
+                        <!-- Modal (Calendly iframe) -->
+                        <div id="calendlyModal" class="fixed inset-0 z-[9999] hidden" aria-hidden="true" role="dialog"
+                            aria-modal="true" aria-label="Book a call">
+                            <!-- Backdrop (solid + blur) -->
+                            <div class="absolute inset-0 bg-black/70 backdrop-blur-md"></div>
+
+                            <!-- Modal Card -->
+                            <div class="relative flex min-h-full items-center justify-center p-4 sm:p-6">
+                                <div
+                                    class="relative w-full max-w-4xl overflow-hidden rounded-3xl bg-white shadow-[0_30px_100px_rgba(0,0,0,0.35)] ring-1 ring-black/10">
+                                    <!-- Header -->
+                                    <div
+                                        class="flex items-center justify-between border-b border-slate-200 px-4 py-3 sm:px-6">
+                                        <div class="text-sm font-semibold text-slate-900">Book a Free 30-minute Call
+                                        </div>
+
+                                        <!-- Close button (ONLY way to close) -->
+                                        <button type="button" id="closeCalendly"
+                                            class="inline-flex items-center gap-2 rounded-full bg-slate-100 px-4 py-2 text-sm font-semibold text-slate-900 hover:bg-slate-200 focus:outline-none focus:ring-4 focus:ring-slate-200"
+                                            aria-label="Close modal">
+                                            Close
+                                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+                                                aria-hidden="true">
+                                                <path d="M18 6L6 18" stroke="currentColor" stroke-width="2.4"
+                                                    stroke-linecap="round" />
+                                                <path d="M6 6l12 12" stroke="currentColor" stroke-width="2.4"
+                                                    stroke-linecap="round" />
+                                            </svg>
+                                        </button>
+                                    </div>
+
+                                    <!-- Body -->
+                                    <div class="relative">
+                                        <!-- Responsive height area for iframe -->
+                                        <div class="h-[78vh] min-h-[520px] w-full">
+                                            <iframe id="calendlyFrame" title="Calendly booking" class="h-full w-full"
+                                                src="" frameborder="0" loading="lazy"
+                                                allow="camera; microphone; fullscreen"></iframe>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <script>
+                            (function () {
+                                const modal = document.getElementById("calendlyModal");
+                                const openBtn = document.getElementById("openCalendly");
+                                const closeBtn = document.getElementById("closeCalendly");
+                                const frame = document.getElementById("calendlyFrame");
+
+                                const CALENDLY_URL = "https://calendly.com/octalve-info/30min";
+
+                                if (!modal || !openBtn || !closeBtn || !frame) return;
+
+                                function openModal() {
+                                    // Set src only when opening (faster initial page load)
+                                    frame.src = CALENDLY_URL;
+
+                                    modal.classList.remove("hidden");
+                                    modal.setAttribute("aria-hidden", "false");
+
+                                    // Prevent background scroll
+                                    document.documentElement.classList.add("overflow-hidden");
+                                    document.body.classList.add("overflow-hidden");
+
+                                    // Focus close for accessibility
+                                    closeBtn.focus();
+                                }
+
+                                function closeModal() {
+                                    modal.classList.add("hidden");
+                                    modal.setAttribute("aria-hidden", "true");
+
+                                    // Remove iframe src to stop audio/network + reset state
+                                    frame.src = "";
+
+                                    // Restore background scroll
+                                    document.documentElement.classList.remove("overflow-hidden");
+                                    document.body.classList.remove("overflow-hidden");
+
+                                    // Return focus to button
+                                    openBtn.focus();
+                                }
+
+                                openBtn.addEventListener("click", (e) => {
+                                    e.preventDefault();
+                                    openModal();
+                                });
+
+                                // ONLY close by clicking Close button
+                                closeBtn.addEventListener("click", closeModal);
+
+                                // Explicitly DO NOT close on backdrop click or Esc:
+                                // - No backdrop listener
+                                // - Block Escape key closing
+                                document.addEventListener("keydown", (e) => {
+                                    if (!modal.classList.contains("hidden") && e.key === "Escape") {
+                                        // do nothing intentionally
+                                        e.preventDefault();
+                                    }
+                                });
+                            })();
+                        </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                        <a href="contact/"
+                            class="inline-flex items-center justify-center rounded-full px-6 py-3 text-sm font-extrabold bg-white transition hover:bg-white/80 soft-border">
+                            Book a Demo
+                        </a>
+                    </div>
+
+                    <!-- Trustpilot row (placeholder) -->
+                    <div class="flex items-center gap-3 pt-3">
+                        <span class="text-sm font-semibold">Excellent</span>
+
+                        <!-- stars placeholder -->
+                        <div class="flex items-center gap-0.5">
+                            <span
+                                class="inline-flex h-5 w-5 items-center justify-center rounded bg-emerald-600 text-white text-xs font-black">★</span>
+                            <span
+                                class="inline-flex h-5 w-5 items-center justify-center rounded bg-emerald-600 text-white text-xs font-black">★</span>
+                            <span
+                                class="inline-flex h-5 w-5 items-center justify-center rounded bg-emerald-600 text-white text-xs font-black">★</span>
+                            <span
+                                class="inline-flex h-5 w-5 items-center justify-center rounded bg-emerald-600 text-white text-xs font-black">★</span>
+                            <span
+                                class="inline-flex h-5 w-5 items-center justify-center rounded bg-emerald-600 text-white text-xs font-black">★</span>
+                        </div>
+
+                        <div class="flex items-center gap-2">
+                            <img src="https://placehold.co/90x22/png?text=Trustpilot" alt="Trustpilot (replace)"
+                                class="h-5 w-auto object-contain" />
+                        </div>
+                    </div>
+                </div>
+
+                <!-- RIGHT: Visual cluster -->
+                <div class="relative lg:justify-self-end w-full max-w-[560px] mx-auto">
+                    <!-- background circle -->
+                    <div class="absolute right-4 md:right-10 top-10 md:top-14 h-[320px] w-[320px] md:h-[380px] md:w-[380px] rounded-full"
+                        style="background:rgba(245, 200, 55, .55);" aria-hidden="true"></div>
+
+                    <!-- Analytics card (top-left) -->
+                    <div class="absolute left-0 top-0 md:left-2 md:top-2 z-20 w-[250px] sm:w-[280px]">
+                        <div class="rounded-3xl bg-white soft-border shadow-sm overflow-hidden">
+                            <div class="px-5 py-3 bg-pink-50 border-b" style="border-color:var(--border);">
+                                <div class="flex items-center gap-2 font-bold">
+                                    <span class="icon">auto_awesome</span>
+                                    Analytics
+                                </div>
+                            </div>
+
+                            <div class="p-4 grid gap-3">
+                                <div
+                                    class="rounded-2xl bg-slate-50 soft-border px-4 py-3 flex items-center justify-between">
+                                    <div class="flex items-center gap-3">
+                                        <img class="h-6 w-6 rounded" src="/brand/Octalveicon.png" alt="logo">
+                                        <div class="text-sm font-semibold">Total Orders</div>
+                                    </div>
+                                    <div class="text-sm font-extrabold text-black/60">200</div>
+                                </div>
+
+                                <div
+                                    class="rounded-2xl bg-slate-50 soft-border px-4 py-3 flex items-center justify-between">
+                                    <div class="flex items-center gap-3">
+                                        <img class="h-6 w-6 rounded" src="/brand/Octalveicon.png" alt="logo">
+                                        <div class="text-sm font-semibold">Total Clients</div>
+                                    </div>
+                                    <div class="text-sm font-extrabold text-black/60">150</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Quote (top-right) -->
+                    <div class="absolute right-0 top-20 md:top-24 z-20 text-right max-w-[220px] sm:max-w-[260px]">
+                        <p class="text-2xl sm:text-3xl font-extrabold leading-tight text-white/90">
+                            "Launch faster<br />
+                            <span class=" opacity-70">grow smarter</span>”
+                        </p>
+
+                        <!-- small curved arrow (SVG) -->
+                        <div class="ml-auto mt-2 w-14 h-14 opacity-80">
+                            <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M62 16C54 24 44 28 35 33C25 39 18 49 18 62" stroke="black" stroke-width="4"
+                                    stroke-linecap="round" />
+                                <path d="M18 62C22 58 27 56 32 56" stroke="black" stroke-width="4"
+                                    stroke-linecap="round" />
+                            </svg>
+                        </div>
+                    </div>
+
+                    <!-- Portrait circle + stroke -->
+                    <div class="relative z-10 pt-10 md:pt-12">
+                        <div
+                            class="ml-auto w-[340px] h-[340px] md:w-[420px] md:h-[420px] rounded-[50px] overflow-hidden relative">
+                            <!-- outer stroke -->
+                            <div class="absolute inset-0 rounded-full border-2 border-black/15" aria-hidden="true">
+                            </div>
+
+                            <!-- portrait placeholder -->
+                            <img src="/brand/Octalvesuiteihero.png" alt="Octalve Suite Hero"
+                                class="absolute inset-0 w-full h-full object-cover" />
+                        </div>
+
+                        <!-- Name card -->
+                        <div class="absolute right-10 md:right-16 bottom-6 md:bottom-10 z-30">
+                            <div class="rounded-2xl bg-[#f4efcc] soft-border px-5 py-4 shadow-sm">
+                                <div class="text-lg font-extrabold">Launch Your Idea</div>
+                                <div class="text-sm font-semibold text-black/60">Grow your NGO</div>
+                            </div>
+                        </div>
+
+                        <!-- subtle connector line (optional visual) -->
+                        <div
+                            class="absolute left-8 md:left-12 top-36 md:top-40 h-[280px] w-[2px] bg-black/10 z-0 hidden sm:block">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Backed by strip -->
+            <div class="mt-12 md:mt-14">
+                <div class="rounded-3xl bg-white soft-border shadow-sm px-6 py-8 md:px-10">
+                    <div class="flex flex-col lg:flex-row items-center justify-between gap-6">
+                        <div class="text-xl md:text-2xl font-extrabold">Backed By The Best</div>
+
+                        <div class="flex flex-wrap items-center justify-center gap-x-10 gap-y-4">
+                            <img class="h-8 w-auto object-contain opacity-90" src="/brand/logo/Octalve Cloud Logo.png"
+                                alt="Logo (replace)">
+                            <img class="h-8 w-auto object-contain opacity-90" src="/brand/logo/Octalve Consult.png"
+                                alt="Logo (replace)">
+                            <img class="h-8 w-auto object-contain opacity-90" src="/brand/logo/Octalve Lab.png"
+                                alt="Logo (replace)">
+
+                            <img class="h-8 w-auto object-contain opacity-90" src="brand/logo/Octalve Vault Logo.png"
+                                alt="Logo (replace)">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+
+
+
+
+
+    <!-- PRODUCT SUITE (paste this section below your Hero section) -->
+    <!-- <section class="w-full bg-white">
+        <div class="mx-auto container-max px-4 py-14 md:py-16"> -->
+    <!-- Top heading -->
+    <!-- <div class="text-center">
+                <div class="text-sm font-semibold tracking-wide text-black/60">Product Suite</div>
+                <h2 class="mt-3 text-3xl md:text-5xl font-extrabold tracking-tight">
+                    The All In One Platform for Founders like You.
+                </h2>
+                <p class="mt-4 text-base md:text-lg text-black/60">
+                    Launch, Grow, Manage &amp; Automate your business without any hassle.
+                </p>
+            </div> -->
+
+    <!-- Tabs row + CTAs -->
+    <!-- <div class="mt-10 flex flex-col lg:flex-row lg:items-center lg:justify-between gap-5"> -->
+    <!-- Tabs -->
+    <!-- <div class="w-full lg:w-auto">
+                    <div class="border-b border-black/10">
+                        <div class="flex items-center gap-8 overflow-x-auto no-scrollbar" role="tablist"
+                            aria-label="Product suite tabs">
+                            <button class="ps-tab relative py-3 text-sm md:text-base font-semibold whitespace-nowrap"
+                                role="tab" aria-selected="true" data-ps-tab="biz">
+                                Octalve Suite™
+                                <span
+                                    class="ps-underline absolute left-0 -bottom-[1px] h-[2px] w-full bg-black rounded-full"></span>
+                            </button> -->
+    <!-- 
+                            <button
+                                class="ps-tab relative py-3 text-sm md:text-base font-semibold whitespace-nowrap text-black/50 hover:text-black"
+                                role="tab" aria-selected="false" data-ps-tab="formation">
+                                Launch
+                                <span
+                                    class="ps-underline hidden absolute left-0 -bottom-[1px] h-[2px] w-full bg-black rounded-full"></span>
+                            </button>
+
+                            <button
+                                class="ps-tab relative py-3 text-sm md:text-base font-semibold whitespace-nowrap text-black/50 hover:text-black"
+                                role="tab" aria-selected="false" data-ps-tab="bookkeeping">
+                                Impact
+                                <span
+                                    class="ps-underline hidden absolute left-0 -bottom-[1px] h-[2px] w-full bg-black rounded-full"></span>
+                            </button>
+
+                            <button
+                                class="ps-tab relative py-3 text-sm md:text-base font-semibold whitespace-nowrap text-black/50 hover:text-black"
+                                role="tab" aria-selected="false" data-ps-tab="taxes">
+                                Growth
+                                <span
+                                    class="ps-underline hidden absolute left-0 -bottom-[1px] h-[2px] w-full bg-black rounded-full"></span>
+                            </button>
+
+                            <button
+                                class="ps-tab relative py-3 text-sm md:text-base font-semibold whitespace-nowrap text-black/50 hover:text-black"
+                                role="tab" aria-selected="false" data-ps-tab="analytics">
+                                Partner
+                                <span
+                                    class="ps-underline hidden absolute left-0 -bottom-[1px] h-[2px] w-full bg-black rounded-full"></span>
+                            </button>
+                        </div>
+                    </div>
+                </div> -->
+
+    <!-- CTAs (same as your screenshot row) -->
+    <!-- <div class="flex items-center gap-3 justify-start lg:justify-end">
+                    <a href="#"
+                        class="inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 text-sm font-extrabold text-white transition hover:opacity-90"
+                        style="background:var(--btn-dark);">
+                        Create a Free Account <span class="icon text-base">chevron_right</span>
+                    </a>
+
+                    <a href="#"
+                        class="inline-flex items-center justify-center rounded-full px-6 py-3 text-sm font-extrabold bg-black/5 hover:bg-black/10 transition">
+                        Book a Demo
+                    </a>
+                </div>
+            </div> -->
+
+    <!-- PANELS -->
+    <!-- <div class="mt-8"> -->
+
+    <!-- PANEL: Business-in-a-Box -->
+    <!-- <div class="ps-panel" data-ps-panel="biz"> -->
+    <!-- Row 1 -->
+
+    <!-- <div class="grid lg:grid-cols-3 gap-5"> -->
+    <!-- Formation -->
+
+    <!-- <article class="rounded-[32px] p-8 md:p-9 overflow-hidden"
+                            style="background:rgba(252, 239, 190, .85);">
+                            <div class="flex items-center gap-2 text-sm font-semibold text-black/70">
+                                <span class="icon text-base">insights</span> Partner
+                            </div>
+                            <h3 class="mt-3 text-2xl md:text-3xl font-extrabold tracking-tight">
+                                Form Your Business in the U.S From Anywhere.
+                            </h3>
+                            <a href="#" class="mt-5 inline-flex items-center gap-2 font-semibold">
+                                Start Your Business <span class="icon text-base">chevron_right</span>
+                            </a>
+
+                            <div class="mt-8 rounded-3xl bg-white p-4 soft-border">
+                                <img src="https://placehold.co/900x520/png?text=Demo+Dashboard+(Company)"
+                                    alt="Demo dashboard (replace)"
+                                    class="w-full h-[220px] md:h-[240px] object-cover rounded-2xl" />
+                            </div>
+                        </article> -->
+
+    <!-- Bookkeeping -->
+
+
+    <!-- <article class="rounded-[32px] p-8 md:p-9 overflow-hidden"
+                            style="background:rgba(226, 236, 255, .75);">
+                            <div class="flex items-center gap-2 text-sm font-semibold text-blue-700">
+                                <span class="icon text-base">schedule</span> Growth
+                            </div>
+                            <h3 class="mt-3 text-2xl md:text-3xl font-extrabold tracking-tight">
+                                Easy Bookkeeping for Your Finances.
+                            </h3>
+                            <a href="#" class="mt-5 inline-flex items-center gap-2 font-semibold">
+                                Track Your Finances <span class="icon text-base">chevron_right</span>
+                            </a>
+
+                            <div class="mt-8 rounded-3xl bg-white p-4 soft-border">
+                                <img src="https://placehold.co/900x520/png?text=Demo+Dashboard+(Transactions)"
+                                    alt="Demo dashboard (replace)"
+                                    class="w-full h-[220px] md:h-[240px] object-cover rounded-2xl" />
+                            </div>
+                        </article> -->
+
+
+
+    <!-- Taxes -->
+
+
+    <!-- 
+                        <article class="rounded-[32px] p-8 md:p-9 overflow-hidden"
+                            style="background:rgba(200, 243, 214, .75);">
+                            <div class="flex items-center gap-2 text-sm font-semibold text-emerald-700">
+                                <span class="icon text-base">percent</span> Impact
+                            </div>
+                            <h3 class="mt-3 text-2xl md:text-3xl font-extrabold tracking-tight">
+                                Build Trust. Attract Donors. Collect Donations Seamlessly
+                            </h3>
+                            <a href="#" class="mt-5 inline-flex items-center gap-2 font-semibold">
+                                Book Discovery Call
+                                <span class="icon text-base">chevron_right</span>
+                            </a>
+
+                            <div class="mt-8 rounded-3xl bg-white p-4 soft-border">
+                                <img src="https://placehold.co/900x520/png?text=Demo+Dashboard+(Taxes)"
+                                    alt="Demo dashboard (replace)"
+                                    class="w-full h-[220px] md:h-[240px] object-cover rounded-2xl" />
+                            </div>
+                        </article>
+                    </div> -->
+
+    <!-- Row 2 -->
+
+
+
+    <!-- <div class="mt-5 grid lg:grid-cols-2 gap-5"> -->
+    <!-- AI Toolkit -->
+    <!-- <article class="rounded-[32px] p-8 md:p-9 overflow-hidden"
+                            style="background:rgba(210, 244, 255, .65);">
+                            <div class="flex items-center gap-2 text-sm font-semibold text-sky-700">
+                                <span class="icon text-base">smart_toy</span> AI Toolkit
+                            </div>
+                            <h3 class="mt-3 text-2xl md:text-3xl font-extrabold tracking-tight">
+                                Your Smartest AI Business Partner.
+                            </h3>
+                            <a href="#" class="mt-5 inline-flex items-center gap-2 font-semibold">
+                                Try AI Co-Founder <span class="icon text-base">chevron_right</span>
+                            </a>
+
+                            <div class="mt-8 rounded-3xl bg-white p-4 soft-border">
+                                <img src="https://placehold.co/900x420/png?text=Demo+AI+Screen" alt="AI demo (replace)"
+                                    class="w-full h-[200px] md:h-[220px] object-cover rounded-2xl" />
+                            </div>
+                        </article> -->
+
+    <!-- Analytics -->
+
+
+
+    <!-- <article class="rounded-[32px] p-8 md:p-9 overflow-hidden"
+                            style="background:rgba(255, 221, 231, .55);">
+                            <div class="flex items-center gap-2 text-sm font-semibold text-rose-700">
+                                <span class="icon text-base">insights</span> Launch
+                            </div>
+                            <h3 class="mt-3 text-2xl md:text-3xl font-extrabold tracking-tight">
+                                Your Business Deserves a Proper Launch
+                            </h3>
+                            <a href="#" class="mt-5 inline-flex items-center gap-2 font-semibold">
+                                Start Launch Suite Today <span class="icon text-base">chevron_right</span>
+                            </a>
+
+                            <div class="mt-8 rounded-3xl bg-white p-4 soft-border">
+                                <img src="https://placehold.co/900x420/png?text=Demo+Analytics+Dashboard"
+                                    alt="Analytics demo (replace)"
+                                    class="w-full h-[200px] md:h-[220px] object-cover rounded-2xl" />
+                            </div>
+                        </article>
+                    </div>
+                </div> -->
+
+
+
+
+
+
+
+    <!-- PANEL: Formation -->
+
+
+    <!-- <div class="ps-panel hidden" data-ps-panel="formation">
+                    <div class="grid lg:grid-cols-3 gap-5"> -->
+    <!-- Left big -->
+    <!-- <article class="rounded-[32px] p-8 md:p-9 overflow-hidden"
+                            style="background:rgba(252, 239, 190, .85);">
+                            <div class="text-sm font-semibold text-black/60">Formation Filings</div>
+                            <h3 class="mt-3 text-3xl font-extrabold tracking-tight">
+                                Stay Legally Compliant with Expert Formation Filings.
+                            </h3>
+                            <p class="mt-4 text-black/65">
+                                We handle the paperwork, filings, and compliance so you can focus on your vision.
+                            </p>
+
+                            <div class="mt-8 rounded-3xl bg-white p-4 soft-border">
+                                <img src="https://placehold.co/900x560/png?text=Demo+Dashboard+(Company)"
+                                    alt="Company dashboard demo"
+                                    class="w-full h-[240px] md:h-[260px] object-cover rounded-2xl" />
+                            </div>
+                        </article> -->
+
+    <!-- Middle stacked -->
+
+    <!--                         
+                        <div class="grid gap-5">
+                            <article class="rounded-[32px] p-8 md:p-9 overflow-hidden"
+                                style="background:rgba(252, 239, 190, .85);">
+                                <div class="text-sm font-semibold text-black/60">EIN</div>
+                                <h3 class="mt-3 text-2xl md:text-3xl font-extrabold tracking-tight">
+                                    Employer Identification Number Made Easy.
+                                </h3>
+                                <p class="mt-4 text-black/65">
+                                    Get your Employer Identification Number without hassle.
+                                </p>
+
+                                <div class="mt-7 flex justify-center">
+                                    <img src="https://placehold.co/260x170/png?text=Illustration"
+                                        alt="Illustration placeholder"
+                                        class="w-[240px] md:w-[260px] h-auto object-contain" />
+                                </div>
+                            </article> -->
+
+    <!-- <article class="rounded-[32px] p-8 md:p-9 bg-white soft-border">
+                                <div class="text-sm font-semibold text-black/60">Operating Agreement</div>
+                                <h3 class="mt-3 text-2xl md:text-3xl font-extrabold tracking-tight">
+                                    Protect Your LLC With an Operating Agreement.
+                                </h3>
+                            </article>
+                        </div> -->
+
+    <!-- Right big -->
+
+    <!--                         
+                        <article class="rounded-[32px] p-8 md:p-9 overflow-hidden"
+                            style="background:rgba(252, 239, 190, .85);">
+                            <div class="text-sm font-semibold text-black/60">Registered Agent Services</div>
+                            <h3 class="mt-3 text-3xl font-extrabold tracking-tight">
+                                Trusted Registered Agent Services for Your Business.
+                            </h3>
+                            <p class="mt-4 text-black/65">
+                                We receive your important government documents, so you don’t miss a thing.
+                            </p>
+
+                            <div class="mt-7 flex justify-center">
+                                <img src="https://placehold.co/320x230/png?text=Illustration"
+                                    alt="Illustration placeholder"
+                                    class="w-[280px] md:w-[320px] h-auto object-contain" />
+                            </div>
+                        </article>
+                    </div>
+                </div> -->
+
+    <!-- PANEL: Bookkeeping -->
+
+
+    <!--                 
+                <div class="ps-panel hidden" data-ps-panel="bookkeeping">
+                    <div class="grid lg:grid-cols-2 gap-5"> -->
+    <!-- Left big -->
+    <!-- <article class="rounded-[32px] p-8 md:p-10 overflow-hidden"
+                            style="background:rgba(226, 236, 255, .75);">
+                            <div class="text-sm font-semibold text-blue-700">Track Your Transactions</div>
+                            <h3 class="mt-3 text-3xl md:text-4xl font-extrabold tracking-tight">
+                                Track, Categorize, and Monitor All Your Financial Transactions in One Place.
+                            </h3>
+                            <p class="mt-4 text-black/65 max-w-2xl">
+                                Stay up to date with real-time insights and keep your records clean. Never miss a
+                                transaction.
+                            </p>
+
+                            <div class="mt-8 rounded-3xl bg-white p-4 soft-border"
+                                style="border-color:rgba(37,99,235,.45);">
+                                <div class="font-extrabold text-lg px-2 py-1">Transactions</div>
+                                <img src="https://placehold.co/1100x700/png?text=Demo+Dashboard+(Transactions)"
+                                    alt="Transactions dashboard demo"
+                                    class="mt-3 w-full h-[280px] md:h-[340px] object-cover rounded-2xl" />
+                            </div>
+                        </article> -->
+
+
+
+
+
+    <!-- Right stacked -->
+
+
+    <!--                         
+                        <div class="grid gap-5">
+                            <article class="rounded-[32px] p-8 md:p-10 bg-white soft-border"
+                                style="border-color:rgba(37,99,235,.55);">
+                                <div class="text-sm font-semibold text-blue-700">Send Invoices</div>
+                                <h3 class="mt-3 text-2xl md:text-3xl font-extrabold tracking-tight">
+                                    Save Time and Impress Clients by Sending Professional Invoices in Seconds.
+                                </h3>
+                            </article>
+
+                            <article class="rounded-[32px] p-8 md:p-10 overflow-hidden"
+                                style="background:rgba(226, 236, 255, .75);">
+                                <div class="text-sm font-semibold text-blue-700">Dedicated Bookkeeper</div>
+                                <h3 class="mt-3 text-2xl md:text-3xl font-extrabold tracking-tight">
+                                    A Dedicated Bookkeeper Who Knows Your Business.
+                                </h3>
+                                <p class="mt-4 text-black/65">
+                                    Say goodbye to late nights with spreadsheets. With expert bookkeeping support,
+                                    you’ll
+                                    always know where your money stands.
+                                </p>
+
+                                <div class="mt-6 flex justify-center">
+                                    <img src="https://placehold.co/320x220/png?text=Illustration"
+                                        alt="Illustration placeholder"
+                                        class="w-[280px] md:w-[320px] h-auto object-contain" />
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                </div> -->
+
+
+
+
+
+    <!-- PANEL: Taxes -->
+    <!-- <div class="ps-panel hidden" data-ps-panel="taxes">
+                    <div class="grid lg:grid-cols-2 gap-5"> -->
+    <!-- Left big -->
+    <!-- <article class="rounded-[32px] p-8 md:p-10 overflow-hidden"
+                            style="background:rgba(200, 243, 214, .75);">
+                            <div class="text-sm font-semibold text-emerald-700">Annual State Tax Filings</div>
+                            <h3 class="mt-3 text-3xl md:text-4xl font-extrabold tracking-tight">
+                                Stay Compliant with Hassle-Free Annual State Tax Filings.
+                            </h3>
+                            <p class="mt-4 text-black/65">
+                                We handle your yearly state tax filings on time and with accuracy, so you can avoid
+                                penalties and focus on running your business.
+                            </p>
+
+                            <div class="mt-8 rounded-3xl bg-white p-4 soft-border"
+                                style="border-color:rgba(16,185,129,.45);">
+                                <div class="font-extrabold text-lg px-2 py-1">Taxes</div>
+                                <img src="https://placehold.co/1100x700/png?text=Demo+Dashboard+(Taxes)"
+                                    alt="Taxes dashboard demo"
+                                    class="mt-3 w-full h-[280px] md:h-[340px] object-cover rounded-2xl" />
+                            </div>
+                        </article> -->
+
+    <!-- Right stacked -->
+    <!-- <div class="grid gap-5">
+                            <article class="rounded-[32px] p-8 md:p-10 overflow-hidden"
+                                style="background:rgba(200, 243, 214, .75);">
+                                <div class="text-sm font-semibold text-emerald-700">Business IRS Tax Filings</div>
+                                <h3 class="mt-3 text-2xl md:text-3xl font-extrabold tracking-tight">
+                                    Accurate &amp; On-Time Business IRS Tax Filings.
+                                </h3>
+                                <p class="mt-4 text-black/65">
+                                    Never worry about penalties or missed deadlines—doola manages your filings
+                                    end-to-end
+                                    with accuracy and ease.
+                                </p>
+
+                                <div class="mt-6 flex justify-center">
+                                    <img src="https://placehold.co/320x240/png?text=Illustration"
+                                        alt="Illustration placeholder"
+                                        class="w-[280px] md:w-[320px] h-auto object-contain" />
+                                </div>
+                            </article>
+
+                            <article class="rounded-[32px] p-8 md:p-10 bg-white soft-border"
+                                style="border-color:rgba(16,185,129,.45);">
+                                <div class="text-sm font-semibold text-emerald-700">Licensed Tax Professional
+                                    Consultation
+                                </div>
+                                <h3 class="mt-3 text-2xl md:text-3xl font-extrabold tracking-tight">
+                                    Personalized CPA Experts to Navigate Your Taxes.
+                                </h3>
+                            </article>
+                        </div>
+                    </div>
+                </div> -->
+
+
+
+
+
+    <!-- PANEL: Analytics -->
+
+
+
+    <!-- <div class="ps-panel hidden" data-ps-panel="analytics">
+                    <div class="grid lg:grid-cols-2 gap-5"> -->
+    <!-- Left big -->
+    <!-- <article class="rounded-[32px] p-8 md:p-10 overflow-hidden"
+                            style="background:rgba(255, 221, 231, .55);">
+                            <div class="text-sm font-semibold text-rose-700">E-Commerce Analytics</div>
+                            <h3 class="mt-3 text-3xl md:text-4xl font-extrabold tracking-tight">
+                                Powerful E-Commerce Analytics Designed for Smarter Business Decisions.
+                            </h3>
+                            <p class="mt-4 text-black/65">
+                                Get detailed insights into every transaction, campaign, and customer interaction to
+                                fuel
+                                smarter decisions.
+                            </p>
+
+                            <div class="mt-8 rounded-3xl bg-white p-4 soft-border"
+                                style="border-color:rgba(244,63,94,.35);">
+                                <div class="font-extrabold text-lg px-2 py-1">Orders</div>
+                                <img src="https://placehold.co/1100x700/png?text=Demo+Dashboard+(Orders)"
+                                    alt="Orders dashboard demo"
+                                    class="mt-3 w-full h-[280px] md:h-[340px] object-cover rounded-2xl" />
+                            </div>
+                        </article> -->
+
+    <!-- Right big (dashboard + text under) -->
+    <!-- <article class="rounded-[32px] p-8 md:p-10 overflow-hidden"
+                            style="background:rgba(255, 221, 231, .55);">
+                            <div class="rounded-3xl bg-white p-4 soft-border" style="border-color:rgba(244,63,94,.35);">
+                                <img src="https://placehold.co/1100x520/png?text=Demo+Analytics+Dashboard"
+                                    alt="Analytics dashboard demo"
+                                    class="w-full h-[220px] md:h-[260px] object-cover rounded-2xl" />
+                            </div>
+
+                            <div class="mt-8">
+                                <div class="text-sm font-semibold text-rose-700">Track Ads Campaign</div>
+                                <h3 class="mt-3 text-2xl md:text-3xl font-extrabold tracking-tight">
+                                    Track Your Ad Campaigns for Complete Performance Visibility.
+                                </h3>
+                                <p class="mt-4 text-black/65">
+                                    Gain real-time insights into campaign reach, engagement, and sales impact to
+                                    maximize
+                                    growth.
+                                </p>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section> -->
+
+
+
+    <!-- WHY Octalve Suite (paste this section below your previous section) -->
+
+
+
+    <section class="w-full bg-white">
+        <div class="mx-auto container-max px-4 py-14 md:py-16">
+            <!-- Heading -->
+            <div class="text-center">
+                <div class="text-sm font-semibold tracking-wide text-black/60">Resources</div>
+                <h2 class="mt-3 text-4xl md:text-5xl font-extrabold tracking-tight">Why Octalve Suite?</h2>
+                <p class="mt-4 text-base md:text-lg text-black/60 max-w-3xl mx-auto">
+                    We don’t just set up your business, we set you up for success.
+                    <br class="hidden md:block" />
+                    See how Octalve Suite stacks up against the competition.
+                </p>
+            </div>
+
+            <!-- Cards -->
+            <div class="mt-12 grid lg:grid-cols-2 gap-6 lg:gap-8">
+                <!-- Card 1: Do it with Octalve (blue overlay) -->
+                <article class="why-card group relative overflow-hidden rounded-[36px] soft-border bg-[#0064E0]">
+                    <!-- Image (placeholder) -->
+                    <div class="relative h-[420px] md:h-[520px] overflow-hidden">
+                        <img src="/brand/Octalvesuitgrowth.png" alt="Replace image"
+                            class="w-full h-full object-cover" />
+
+                        <!-- warm overlay -->
+                        <div class="absolute inset-0 bg-yellow-300/35 mix-blend-multiply"></div>
+
+                        <!-- bottom gradient to help text -->
+                        <div
+                            class="absolute inset-x-0 bottom-0 h-56 bg-gradient-to-t from-[#0064E0] via-[#0064E0]/90 to-transparent">
+                        </div>
+                    </div>
+
+                    <!-- Content -->
+                    <div class="p-8 md:p-10">
+                        <h3 class="text-2xl md:text-3xl font-extrabold tracking-tight text-white/90">
+                            Do It With Octalve Suite
+                        </h3>
+                        <p class="mt-2 text-base md:text-lg text-white/70">
+                            Build your dream. We’ll handle the rest.
+                        </p>
+
+                        <div class="mt-6">
+                            <a href="/Startnow/"
+                                class="inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 text-sm font-extrabold text-white transition group-hover:opacity-90"
+                                style="background:var(--btn-dark);">
+                                Start Today
+                                <span class="icon text-base">chevron_right</span>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Card 2: Do it yourself (dark overlay) -->
+                <article class="why-card group relative overflow-hidden rounded-[36px] soft-border bg-[#000A16]">
+                    <!-- Image (placeholder) -->
+                    <div class="relative h-[420px] md:h-[520px] overflow-hidden">
+                        <img src="/brand/Octalvesuitpartner.png" alt="Octalve Suite Partner"
+                            class="w-full h-full object-cover grayscale" />
+
+                        <!-- dark overlay -->
+                        <div class="absolute inset-0 bg-[#000A16]/55"></div>
+
+                        <!-- floating keywords -->
+                        <div class="absolute inset-0 pointer-events-none select-none">
+                            <span class="absolute top-16 left-10 text-white/25 font-extrabold text-lg">I need
+                                Logo</span>
+                            <span class="absolute top-10 right-12 text-white/35 font-extrabold text-2xl">Can I get
+                                website</span>
+                            <span class="absolute top-40 right-14 text-white/20 font-extrabold text-lg">Increase your
+                                revenue
+                            </span>
+                            <span
+                                class="absolute bottom-40 left-10 text-white/25 font-extrabold text-2xl">White-Label</span>
+                            <span
+                                class="absolute bottom-56 right-10 text-white/20 font-extrabold text-lg">Referral</span>
+                        </div>
+
+                        <!-- bottom gradient to help text -->
+                        <div
+                            class="absolute inset-x-0 bottom-0 h-56 bg-gradient-to-t from-[#000A16] via-[#000A16]/60 to-transparent">
+                        </div>
+                    </div>
+
+                    <!-- Content -->
+                    <div class="p-8 md:p-10 text-white">
+                        <h3 class="text-2xl md:text-3xl font-extrabold tracking-tight">
+                            Partner for growth
+                        </h3>
+                        <p class="mt-2 text-base md:text-lg text-white/80">
+                            Going solo? See how we compare.
+                        </p>
+
+                        <div class="mt-6">
+                            <a href="/contact/"
+                                class="inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 text-sm font-extrabold bg-white text-black transition group-hover:bg-white/90">
+                                Contact Us
+                                <span class="icon text-base">chevron_right</span>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+    <!-- OVERVIEW / RESOURCES CARDS (paste this section below the previous one) -->
+
+
+
+
+    <section class="w-full bg-white">
+        <div class="mx-auto container-max px-4 py-14 md:py-16">
+            <!-- Heading -->
+            <div class="text-center">
+                <div class="text-sm font-semibold tracking-wide text-black/60">Overview</div>
+                <h2 class="mt-3 text-4xl md:text-5xl font-extrabold tracking-tight">
+                    Octalve Suite, Launchpad For Do’ers
+                </h2>
+                <p class="mt-4 text-base md:text-lg text-black/60">
+                    Powerful suite and package to help you scale smarter and faster.
+                </p>
+            </div>
+
+            <!-- Cards grid -->
+            <div class="mt-12 grid gap-6 lg:gap-8 lg:grid-cols-3">
+                <!-- Card 1 -->
+                <article class="gp-card rounded-[36px] bg-[#f3f3f3] overflow-hidden soft-border">
+                    <!-- image -->
+                    <div class="p-6 md:p-7">
+                        <div class="rounded-[28px] overflow-hidden bg-white">
+                            <img src="/brand/Octalvesuitlaunch" alt="Octalve Suite Launch"
+                                class="w-full h-[220px] md:h-[240px] object-cover" />
+                        </div>
+                    </div>
+
+                    <!-- content -->
+                    <div class="px-6 md:px-7 pb-7 md:pb-8">
+                        <h3 class="text-2xl md:text-[28px] font-extrabold leading-tight tracking-tight">
+                            Launch Suite (The Start-Up Launch Pack)
+                        </h3>
+
+                        <p class="mt-4 text-base md:text-lg text-black/70 leading-relaxed">
+                            <b>The Goal:</b> To get you professional and "open for business" in 14 days. <br />
+
+                            <b>Highlights:</b> Brand Identity, 5-Page Responsive Website, and a 14-Day Social Media
+                            Starter
+                            Kit.
+                        </p>
+
+                        <div class="mt-8">
+                            <a href="/Launchsuite/"
+                                class="inline-flex items-center justify-center rounded-full px-6 py-3 text-sm font-extrabold bg-black/5 hover:bg-black/10 transition">
+                                Learn More
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Card 2 -->
+                <article class="gp-card rounded-[36px] bg-[#f3f3f3] overflow-hidden soft-border">
+                    <!-- image -->
+                    <div class="p-6 md:p-7">
+                        <div class="rounded-[28px] overflow-hidden bg-white">
+                            <img src="/brand/Octalvesuitngo" alt="Octalve Suite NGO"
+                                class="w-full h-[220px] md:h-[240px] object-cover" />
+                        </div>
+                    </div>
+
+                    <!-- content -->
+                    <div class="px-6 md:px-7 pb-7 md:pb-8">
+                        <h3 class="text-2xl md:text-[28px] font-extrabold leading-tight tracking-tight">
+                            Impact Suite (The NGO Impact Kit)
+                        </h3>
+
+                        <p class="mt-4 text-base md:text-lg text-black/70 leading-relaxed">
+                            <b>The Goal:</b> To build trust and streamline donor contributions. <br />
+
+                            <b>Highlights:</b> Credibility-focused branding, Donation-ready website, and Impact
+                            Reporting
+                            templates.
+                        </p>
+
+                        <div class="mt-8">
+                            <a href="/Impactsuite/"
+                                class="inline-flex items-center justify-center rounded-full px-6 py-3 text-sm font-extrabold bg-black/5 hover:bg-black/10 transition">
+                                Learn More
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Card 3 -->
+                <article class="gp-card rounded-[36px] bg-[#f3f3f3] overflow-hidden soft-border">
+                    <!-- image -->
+                    <div class="p-6 md:p-7">
+                        <div class="rounded-[28px] overflow-hidden bg-white">
+                            <img src="/brand/Octalvesuitsocial" alt="Octalve Suite Social"
+                                class="w-full h-[220px] md:h-[240px] object-cover" />
+                        </div>
+                    </div>
+
+                    <!-- content -->
+                    <div class="px-6 md:px-7 pb-7 md:pb-8">
+                        <h3 class="text-2xl md:text-[28px] font-extrabold leading-tight tracking-tight">
+                            Growth Suite (SME Growth Subscription)
+                        </h3>
+
+                        <p class="mt-4 text-base md:text-lg text-black/70 leading-relaxed">
+                            <b>The Goal:</b> Constant visibility and sales funnel optimization. <br />
+
+                            <b>Highlights:</b> Monthly content design, regular website updates, and lead capture
+                            management.
+                        </p>
+
+                        <div class="mt-8">
+                            <a href="/Pricing/"
+                                class="inline-flex items-center justify-center rounded-full px-6 py-3 text-sm font-extrabold bg-black/5 hover:bg-black/10 transition">
+                                Check Pricing
+                            </a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- PERKS & REWARDS (paste this section below the previous section) -->
+    <section class="w-full bg-white">
+        <div class="mx-auto container-max px-4 py-14 md:py-20">
+            <div class="grid lg:grid-cols-2 gap-10 lg:gap-14 items-center">
+
+                <!-- LEFT: Copy -->
+                <div class="max-w-xl">
+                    <div class="flex items-center gap-2 text-sm font-semibold text-black/60">
+                        <!-- logo placeholder (single PNG) -->
+                        <img src="/brand/logo/Octalve Suite.png" alt="Octalve Suite Logo"
+                            class="h-5 w-auto object-contain" />
+                        <span>Perks and Rewards</span>
+                    </div>
+
+                    <h2 class="mt-5 text-4xl md:text-5xl font-extrabold tracking-tight leading-tight">
+                        To help you scale your
+                        <br class="hidden sm:block" />
+                        agency without the overhead.
+                    </h2>
+
+                    <p class="mt-5 text-base md:text-lg text-black/60">
+                        White-label production (we work, you take the credit), referral commissions, and priority
+                        support.
+                    </p>
+
+                    <div class="mt-8">
+                        <a href="/contact/"
+                            class="inline-flex items-center justify-center gap-2 rounded-full px-7 py-3.5 text-sm font-extrabold text-white transition hover:opacity-90"
+                            style="background:var(--btn-dark);">
+                            Visit?Get InTouch
+                            <span class="icon text-base">chevron_right</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- RIGHT: Company tiles grid -->
+                <div class="lg:justify-self-end w-full max-w-[620px]">
+                    <div class="grid sm:grid-cols-2 gap-4 md:gap-5">
+                        <!-- Tile template (repeat) -->
+                        <div
+                            class="perk-tile rounded-3xl bg-black/5 hover:bg-black/10 transition p-5 flex items-center gap-4">
+                            <img src="https://placehold.co/44x44/png?text=PNG" alt="Logo PNG (replace)"
+                                class="h-11 w-11 rounded-xl bg-white object-contain p-2 soft-border" />
+                            <div class="leading-tight">
+                                <div class="font-extrabold">For Lawyer</div>
+                                <div class="text-sm text-black/60">CAC Lawyer</div>
+                            </div>
+                        </div>
+
+                        <div
+                            class="perk-tile rounded-3xl bg-black/5 hover:bg-black/10 transition p-5 flex items-center gap-4">
+                            <img src="https://placehold.co/44x44/png?text=PNG" alt="Logo PNG (replace)"
+                                class="h-11 w-11 rounded-xl bg-white object-contain p-2 soft-border" />
+                            <div class="leading-tight">
+                                <div class="font-extrabold">For Accounting Firm</div>
+                                <div class="text-sm text-black/60">Chartered Accountant</div>
+                            </div>
+                        </div>
+
+                        <div
+                            class="perk-tile rounded-3xl bg-black/5 hover:bg-black/10 transition p-5 flex items-center gap-4">
+                            <img src="https://placehold.co/44x44/png?text=PNG" alt="Logo PNG (replace)"
+                                class="h-11 w-11 rounded-xl bg-white object-contain p-2 soft-border" />
+                            <div class="leading-tight">
+                                <div class="font-extrabold">Cyber Cafe</div>
+                                <div class="text-sm text-black/60">Computer Centers</div>
+                            </div>
+                        </div>
+
+                        <div
+                            class="perk-tile rounded-3xl bg-black/5 hover:bg-black/10 transition p-5 flex items-center gap-4">
+                            <img src="https://placehold.co/44x44/png?text=PNG" alt="Logo PNG (replace)"
+                                class="h-11 w-11 rounded-xl bg-white object-contain p-2 soft-border" />
+                            <div class="leading-tight">
+                                <div class="font-extrabold">Tech-Hub</div>
+                                <div class="text-sm text-black/60">Workspaces</div>
+                            </div>
+                        </div>
+
+                        <!-- <div
+                            class="perk-tile rounded-3xl bg-black/5 hover:bg-black/10 transition p-5 flex items-center gap-4">
+                            <img src="https://placehold.co/44x44/png?text=PNG" alt="Logo PNG (replace)"
+                                class="h-11 w-11 rounded-xl bg-white object-contain p-2 soft-border" />
+                            <div class="leading-tight">
+                                <div class="font-extrabold">TikTok for Business</div>
+                                <div class="text-sm text-black/60">Advertising</div>
+                            </div>
+                        </div>
+
+                        <div
+                            class="perk-tile rounded-3xl bg-black/5 hover:bg-black/10 transition p-5 flex items-center gap-4">
+                            <img src="https://placehold.co/44x44/png?text=PNG" alt="Logo PNG (replace)"
+                                class="h-11 w-11 rounded-xl bg-white object-contain p-2 soft-border" />
+                            <div class="leading-tight">
+                                <div class="font-extrabold">Hands Off Sales Tax</div>
+                                <div class="text-sm text-black/60">Sales Tax Registration</div>
+                            </div>
+                        </div> -->
+
+                        <!-- <div
+                            class="perk-tile rounded-3xl bg-black/5 hover:bg-black/10 transition p-5 flex items-center gap-4">
+                            <img src="https://placehold.co/44x44/png?text=PNG" alt="Logo PNG (replace)"
+                                class="h-11 w-11 rounded-xl bg-white object-contain p-2 soft-border" />
+                            <div class="leading-tight">
+                                <div class="font-extrabold">AutoDS</div>
+                                <div class="text-sm text-black/60">Automation</div>
+                            </div>
+                        </div>
+
+                        <div
+                            class="perk-tile rounded-3xl bg-black/5 hover:bg-black/10 transition p-5 flex items-center gap-4">
+                            <img src="https://placehold.co/44x44/png?text=PNG" alt="Logo PNG (replace)"
+                                class="h-11 w-11 rounded-xl bg-white object-contain p-2 soft-border" />
+                            <div class="leading-tight">
+                                <div class="font-extrabold">Gusto</div>
+                                <div class="text-sm text-black/60">Payroll</div>
+                            </div>
+                        </div> -->
+
+                        <!-- <div
+                            class="perk-tile rounded-3xl bg-black/5 hover:bg-black/10 transition p-5 flex items-center gap-4">
+                            <img src="https://placehold.co/44x44/png?text=PNG" alt="Logo PNG (replace)"
+                                class="h-11 w-11 rounded-xl bg-white object-contain p-2 soft-border" />
+                            <div class="leading-tight">
+                                <div class="font-extrabold">Virtual Post Mail</div>
+                                <div class="text-sm text-black/60">Communication</div>
+                            </div>
+                        </div>
+
+                        <div
+                            class="perk-tile rounded-3xl bg-black/5 hover:bg-black/10 transition p-5 flex items-center gap-4">
+                            <img src="https://placehold.co/44x44/png?text=PNG" alt="Logo PNG (replace)"
+                                class="h-11 w-11 rounded-xl bg-white object-contain p-2 soft-border" />
+                            <div class="leading-tight">
+                                <div class="font-extrabold">OpenPhone</div>
+                                <div class="text-sm text-black/60">Phone</div>
+                            </div>
+                        </div>
+
+                        <div
+                            class="perk-tile rounded-3xl bg-black/5 hover:bg-black/10 transition p-5 flex items-center gap-4">
+                            <img src="https://placehold.co/44x44/png?text=PNG" alt="Logo PNG (replace)"
+                                class="h-11 w-11 rounded-xl bg-white object-contain p-2 soft-border" />
+                            <div class="leading-tight">
+                                <div class="font-extrabold">HubSpot</div>
+                                <div class="text-sm text-black/60">CRM</div>
+                            </div>
+                        </div>
+
+                        <div
+                            class="perk-tile rounded-3xl bg-black/5 hover:bg-black/10 transition p-5 flex items-center gap-4">
+                            <img src="https://placehold.co/44x44/png?text=PNG" alt="Logo PNG (replace)"
+                                class="h-11 w-11 rounded-xl bg-white object-contain p-2 soft-border" />
+                            <div class="leading-tight">
+                                <div class="font-extrabold">Next</div>
+                                <div class="text-sm text-black/60">Insurance</div>
+                            </div>
+                        </div> -->
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+    <!-- TESTIMONIAL STACK (Desktop = stacked left/right, Mobile = swipe slider) -->
+    <section id="tSection" class="w-full bg-white">
+        <div class="max-w-7xl mx-auto px-4 py-14 md:py-16">
+            <!-- Heading -->
+            <div class="text-center">
+                <div class="text-sm font-semibold tracking-wide text-black/60">100+ Founders</div>
+                <h2 class="mt-3 text-4xl md:text-5xl font-extrabold tracking-tight">
+                    Built for Founders. Made for Impacts.
+                </h2>
+            </div>
+
+            <!-- ===================== -->
+            <!-- MOBILE SLIDER (< lg ) -->
+            <!-- ===================== -->
+            <div class="lg:hidden mt-10">
+                <div class="relative">
+                    <!-- Optional arrows (shown on sm+) -->
+                    <button id="tPrev" type="button"
+                        class="hidden sm:flex absolute left-0 top-1/2 -translate-y-1/2 z-10 h-11 w-11 items-center justify-center rounded-full bg-white border border-black/10 shadow-sm"
+                        aria-label="Previous testimonial">
+                        ‹
+                    </button>
+
+                    <button id="tNext" type="button"
+                        class="hidden sm:flex absolute right-0 top-1/2 -translate-y-1/2 z-10 h-11 w-11 items-center justify-center rounded-full bg-white border border-black/10 shadow-sm"
+                        aria-label="Next testimonial">
+                        ›
+                    </button>
+
+                    <!-- Slider track -->
+                    <div id="tSlider"
+                        class="flex gap-5 overflow-x-auto scroll-smooth snap-x snap-mandatory pb-4 -mx-4 px-4"
+                        style="-webkit-overflow-scrolling: touch;">
+                        <!-- Slides injected by JS -->
+                    </div>
+                </div>
+
+                <!-- Dots -->
+                <div id="tDots" class="mt-4 flex justify-center gap-2"></div>
+            </div>
+
+            <!-- ====================== -->
+            <!-- DESKTOP STACK (>= lg ) -->
+            <!-- ====================== -->
+            <div id="tDeck" class="hidden lg:flex mt-12 items-stretch justify-center gap-8">
+                <!-- LEFT side cards (0..2 depending on active) -->
+                <div id="tLeft" class="flex items-stretch gap-6"></div>
+
+                <!-- CENTER main card -->
+                <div class="w-[980px] xl:w-[1100px]">
+                    <article id="tMain"
+                        class="rounded-[44px] border border-black/10 overflow-hidden transition duration-500 ease-out"
+                        style="background:#e9fbff;">
+                        <div class="grid grid-cols-12 gap-10 items-center p-10 min-h-[520px]">
+                            <!-- MEDIA -->
+                            <div class="col-span-5">
+                                <!-- Video thumb (click to load YouTube) -->
+                                <div id="tVideoWrap" class="">
+                                    <div class="rounded-[40px] bg-black p-3 shadow-sm">
+                                        <div class="rounded-[32px] overflow-hidden bg-black relative">
+                                            <img id="tVideoThumb"
+                                                src="https://placehold.co/1200x900/png?text=Video+Thumbnail"
+                                                alt="Video thumbnail placeholder"
+                                                class="w-full h-[420px] object-cover opacity-90" />
+                                            <!-- <button id="tPlayBtn" type="button"
+                                                class="absolute inset-0 grid place-items-center"
+                                                aria-label="Play video">
+                                                <span
+                                                    class="h-16 w-16 rounded-full bg-white/90 grid place-items-center text-black text-2xl font-extrabold">
+                                                    ▶
+                                                </span>
+                                            </button> -->
+                                        </div>
+                                    </div>
+
+                                    <div class="mt-4">
+                                        <img id="tVideoOverlayLogo"
+                                            src="https://placehold.co/220x70/png?text=Overlay+Logo"
+                                            alt="Overlay logo placeholder" class="h-10 w-auto object-contain" />
+                                    </div>
+                                </div>
+
+                                <!-- Image portrait -->
+                                <div id="tImageWrap" class="hidden">
+                                    <div id="tImageBox"
+                                        class="relative rounded-[40px] overflow-hidden border border-black/10"
+                                        style="background:#e7cdb4;">
+                                        <img id="tImage"
+                                            src="https://placehold.co/1000x1000/png?text=Portrait+Placeholder"
+                                            alt="Portrait placeholder" class="w-full h-[420px] object-cover" />
+                                        <div class="absolute left-6 top-6">
+                                            <img id="tBrandLogo" src="https://placehold.co/160x60/png?text=Brand"
+                                                alt="Brand logo placeholder" class="h-8 w-auto object-contain" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- QUOTE -->
+                            <div class="col-span-7">
+                                <div class="flex items-start gap-5">
+                                    <div id="tQuoteMark" class="text-7xl font-extrabold leading-none"
+                                        style="color:#0ea5b7;" aria-hidden="true">
+                                        “
+                                    </div>
+
+                                    <div class="pt-2">
+                                        <p id="tQuote" class="text-2xl font-extrabold leading-snug text-black/90">
+                                            Octalve helped us refine our brand presence and deliver a clean,
+                                            professional branding that actually supports enquiries.
+                                            The process was structured, communication was clear, and they paid attention
+                                            to details that matter for customer trust.
+                                            Since launching, our online presentation looks more credible and easier for
+                                            clients to interact with.
+                                        </p>
+
+                                        <div class="mt-10">
+                                            <div id="tName" class="text-lg font-extrabold">Adam Fuller</div>
+                                            <div class="text-black/60 font-semibold">
+                                                <span id="tRolePrefix">Founder of</span>
+                                                <a id="tCompany" href="#" class="font-extrabold"
+                                                    style="color:var(--primary);">SapphireQuest</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- RIGHT side cards (0..2 depending on active) -->
+                <div id="tRight" class="flex items-stretch gap-6"></div>
+
+                <!-- Hidden parking area for the active side-card node -->
+                <div id="tHidden" class="hidden"></div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+    <!-- FAQ SECTION (paste below your previous sections) -->
+
+
+    <section id="faq" class="w-full bg-white">
+        <div class="max-w-5xl mx-auto px-4 py-14 md:py-20">
+            <!-- Label + Title -->
+            <div class="text-center">
+                <div class="text-sm font-semibold tracking-wide text-black/60">FAQS</div>
+                <h2 class="mt-3 text-4xl md:text-5xl font-extrabold tracking-tight">
+                    Frequently Asked Questions.
+                </h2>
+            </div>
+
+            <!-- FAQ List -->
+            <div class="mt-12 rounded-3xl border border-black/10 overflow-hidden">
+                <!-- ITEM 1 (default open to match screenshot) -->
+                <article class="faq-item border-b border-black/10">
+                    <button class="faq-btn w-full flex items-center justify-between gap-6 px-6 md:px-8 py-6 text-left"
+                        type="button" aria-expanded="true">
+                        <span class="text-xl md:text-2xl font-extrabold">What is Octalve-Suite?</span>
+
+                        <!-- icons: plus/minus using inline SVG (no external dependency) -->
+                        <span
+                            class="faq-icon shrink-0 grid place-items-center h-10 w-10 rounded-full hover:bg-black/5 transition">
+                            <!-- "X" icon when open (matches screenshot style) -->
+                            <svg class="faq-x block" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                                aria-hidden="true">
+                                <path d="M6 6L18 18M18 6L6 18" stroke="currentColor" stroke-width="2.5"
+                                    stroke-linecap="round" />
+                            </svg>
+                            <!-- "+" icon when closed -->
+                            <svg class="faq-plus hidden" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                                aria-hidden="true">
+                                <path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2.5"
+                                    stroke-linecap="round" />
+                            </svg>
+                        </span>
+                    </button>
+
+                    <div class="faq-panel px-6 md:px-8 pb-7">
+                        <p class="text-black/70 leading-relaxed">
+                            Octalve Suite™ is our all-in-one production house designed to take you from "idea" to
+                            "market-ready." Whether you are a
+                            solo founder, a growing NGO, or an agency looking for a reliable production partner, our
+                            specialized suites provide the
+                            foundation you need.
+                        </p>
+                    </div>
+                </article>
+
+                <!-- ITEM 2 -->
+                <article class="faq-item border-b border-black/10">
+                    <button class="faq-btn w-full flex items-center justify-between gap-6 px-6 md:px-8 py-6 text-left"
+                        type="button" aria-expanded="false">
+                        <span class="text-xl md:text-2xl font-extrabold">How quickly can I realistically launch my brand
+                            with the Launch Suite?</span>
+                        <span
+                            class="faq-icon shrink-0 grid place-items-center h-10 w-10 rounded-full hover:bg-black/5 transition">
+                            <svg class="faq-x hidden" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                                aria-hidden="true">
+                                <path d="M6 6L18 18M18 6L6 18" stroke="currentColor" stroke-width="2.5"
+                                    stroke-linecap="round" />
+                            </svg>
+                            <svg class="faq-plus block" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                                aria-hidden="true">
+                                <path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2.5"
+                                    stroke-linecap="round" />
+                            </svg>
+                        </span>
+                    </button>
+                    <div class="faq-panel hidden px-6 md:px-8 pb-7">
+                        <p class="text-black/70 leading-relaxed">
+                            While our typical timeline is 7–14 days, the speed depends heavily on how quickly you
+                            provide your core information
+                            (business name, services, and photos). If you have your details ready at kickoff, we aim for
+                            a "launch-ready" status
+                            within the first 10 days.
+                        </p>
+                    </div>
+                </article>
+
+                <!-- ITEM 3 -->
+                <article class="faq-item border-b border-black/10">
+                    <button class="faq-btn w-full flex items-center justify-between gap-6 px-6 md:px-8 py-6 text-left"
+                        type="button" aria-expanded="false">
+                        <span class="text-xl md:text-2xl font-extrabold">I already have a logo; can I still get the
+                            Start-Up or NGO kit?</span>
+                        <span
+                            class="faq-icon shrink-0 grid place-items-center h-10 w-10 rounded-full hover:bg-black/5 transition">
+                            <svg class="faq-x hidden" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                                aria-hidden="true">
+                                <path d="M6 6L18 18M18 6L6 18" stroke="currentColor" stroke-width="2.5"
+                                    stroke-linecap="round" />
+                            </svg>
+                            <svg class="faq-plus block" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                                aria-hidden="true">
+                                <path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2.5"
+                                    stroke-linecap="round" />
+                            </svg>
+                        </span>
+                    </button>
+                    <div class="faq-panel hidden px-6 md:px-8 pb-7">
+                        <p class="text-black/70 leading-relaxed">
+                            Absolutely. We can perform a "Brand Refresh" where we optimize your existing logo for web
+                            and social media, then build
+                            the rest of your website and content assets around your established identity to ensure 100%
+                            consistency.
+                        </p>
+                    </div>
+                </article>
+
+                <!-- ITEM 4 -->
+                <article class="faq-item border-b border-black/10">
+                    <button class="faq-btn w-full flex items-center justify-between gap-6 px-6 md:px-8 py-6 text-left"
+                        type="button" aria-expanded="false">
+                        <span class="text-xl md:text-2xl font-extrabold">I already have a logo.</span>
+                        <span
+                            class="faq-icon shrink-0 grid place-items-center h-10 w-10 rounded-full hover:bg-black/5 transition">
+                            <svg class="faq-x hidden" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                                aria-hidden="true">
+                                <path d="M6 6L18 18M18 6L6 18" stroke="currentColor" stroke-width="2.5"
+                                    stroke-linecap="round" />
+                            </svg>
+                            <svg class="faq-plus block" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                                aria-hidden="true">
+                                <path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2.5"
+                                    stroke-linecap="round" />
+                            </svg>
+                        </span>
+                    </button>
+                    <div class="faq-panel hidden px-6 md:px-8 pb-7">
+                        <p class="text-black/70 leading-relaxed">
+                            Great—then we focus on improving consistency and building the website + content kit to drive
+                            sales.
+                        </p>
+                    </div>
+                </article>
+
+                <!-- ITEM 5 -->
+                <article class="faq-item border-b border-black/10">
+                    <button class="faq-btn w-full flex items-center justify-between gap-6 px-6 md:px-8 py-6 text-left"
+                        type="button" aria-expanded="false">
+                        <span class="text-xl md:text-2xl font-extrabold">I don’t have content.</span>
+                        <span
+                            class="faq-icon shrink-0 grid place-items-center h-10 w-10 rounded-full hover:bg-black/5 transition">
+                            <svg class="faq-x hidden" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                                aria-hidden="true">
+                                <path d="M6 6L18 18M18 6L6 18" stroke="currentColor" stroke-width="2.5"
+                                    stroke-linecap="round" />
+                            </svg>
+                            <svg class="faq-plus block" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                                aria-hidden="true">
+                                <path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2.5"
+                                    stroke-linecap="round" />
+                            </svg>
+                        </span>
+                    </button>
+                    <div class="faq-panel hidden px-6 md:px-8 pb-7">
+                        <p class="text-black/70 leading-relaxed">
+                            We can structure your content and use clean stock images while you gather photos.
+                        </p>
+                    </div>
+                </article>
+
+                <!-- ITEM 6 -->
+                <article class="faq-item border-b border-black/10">
+                    <button class="faq-btn w-full flex items-center justify-between gap-6 px-6 md:px-8 py-6 text-left"
+                        type="button" aria-expanded="false">
+                        <span class="text-xl md:text-2xl font-extrabold">Do the website packages include domain names
+                            and hosting?</span>
+                        <span
+                            class="faq-icon shrink-0 grid place-items-center h-10 w-10 rounded-full hover:bg-black/5 transition">
+                            <svg class="faq-x hidden" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                                aria-hidden="true">
+                                <path d="M6 6L18 18M18 6L6 18" stroke="currentColor" stroke-width="2.5"
+                                    stroke-linecap="round" />
+                            </svg>
+                            <svg class="faq-plus block" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                                aria-hidden="true">
+                                <path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2.5"
+                                    stroke-linecap="round" />
+                            </svg>
+                        </span>
+                    </button>
+                    <div class="faq-panel hidden px-6 md:px-8 pb-7">
+                        <p class="text-black/70 leading-relaxed">
+                            Our packages focus on design, setup, and optimization. While we provide 1-year basic
+                            security/SSL guidance and
+                            performance setup, domain and hosting fees are typically paid directly by the client to the
+                            provider. We will, however,
+                            guide you through the entire registration process.
+                        </p>
+                    </div>
+                </article>
+
+                <!-- ITEM 7 -->
+                <article class="faq-item">
+                    <button class="faq-btn w-full flex items-center justify-between gap-6 px-6 md:px-8 py-6 text-left"
+                        type="button" aria-expanded="false">
+                        <span class="text-xl md:text-2xl font-extrabold">How does the "Donation-Friendly" system work
+                            for NGOs?</span>
+                        <span
+                            class="faq-icon shrink-0 grid place-items-center h-10 w-10 rounded-full hover:bg-black/5 transition">
+                            <svg class="faq-x hidden" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                                aria-hidden="true">
+                                <path d="M6 6L18 18M18 6L6 18" stroke="currentColor" stroke-width="2.5"
+                                    stroke-linecap="round" />
+                            </svg>
+                            <svg class="faq-plus block" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                                aria-hidden="true">
+                                <path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2.5"
+                                    stroke-linecap="round" />
+                            </svg>
+                        </span>
+                    </button>
+                    <div class="faq-panel hidden px-6 md:px-8 pb-7">
+                        <p class="text-black/70 leading-relaxed">
+                            We integrate reliable gateways like Paystack or Flutterwave directly into your site. This
+                            allows for one-time or
+                            recurring donations. We also set up an automated "Proof of Payment" flow so your team can
+                            track bank transfers without
+                            manual back-and-forth emails.
+                        </p>
+                    </div>
+                </article>
+            </div>
+
+            <!-- Show More button -->
+            <div class="mt-10 flex justify-center">
+                <button id="faqShowMore" type="button"
+                    class="inline-flex items-center gap-2 rounded-full bg-black text-white px-7 py-3 font-semibold shadow-sm hover:opacity-90 transition">
+                    <span id="faqShowMoreText">Show More</span>
+                    <svg id="faqChevron" width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"
+                        class="transition">
+                        <path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Optional: Media placeholders (if you want FAQ to link to video or image later) -->
+            <!--
+      <div class="mt-10 hidden">
+        <img src="https://placehold.co/1200x600/png?text=FAQ+Image+Placeholder" alt="" />
+        <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="FAQ video placeholder"></iframe>
+      </div>
+    -->
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+    <!-- FOOTER SECTION -->
+
+    <div data-include="/components/footer.html"></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script>
+
+        // =========================
+        // "Why choose us" cards animation  (reveal on scroll + subtle tilt on mouse move)
+        // =========================    
+
+        (function () {
+            const cards = document.querySelectorAll('.why-card');
+
+            // reveal on scroll
+            const io = new IntersectionObserver((entries) => {
+                entries.forEach(e => {
+                    if (e.isIntersecting) {
+                        e.target.classList.add('opacity-100', 'translate-y-0');
+                        e.target.classList.remove('opacity-0', 'translate-y-2');
+                        io.unobserve(e.target);
+                    }
+                });
+            }, { threshold: 0.12 });
+
+            cards.forEach(card => {
+                card.classList.add('transition', 'duration-700', 'ease-out', 'opacity-0', 'translate-y-2');
+                io.observe(card);
+            });
+
+            // subtle tilt on mouse move (desktop only)
+            const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+            if (prefersReduced) return;
+
+            cards.forEach(card => {
+                card.addEventListener('mousemove', (e) => {
+                    if (window.innerWidth < 1024) return;
+                    const r = card.getBoundingClientRect();
+                    const x = (e.clientX - r.left) / r.width - 0.5;
+                    const y = (e.clientY - r.top) / r.height - 0.5;
+                    card.style.transform = `perspective(900px) rotateX(${(-y * 3).toFixed(2)}deg) rotateY(${(x * 3).toFixed(2)}deg) translateY(-2px)`;
+                });
+                card.addEventListener('mouseleave', () => {
+                    card.style.transform = '';
+                });
+            });
+        })();
+
+
+
+        // < !--JS(optional): reveal + subtle hover lift.Add once near bottom of page. -- >
+
+        (function () {
+            const cards = document.querySelectorAll('.gp-card');
+
+            // hover lift (desktop)
+            cards.forEach(card => {
+                card.classList.add('transition', 'duration-300', 'ease-out');
+                card.addEventListener('mouseenter', () => {
+                    card.style.transform = 'translateY(-4px)';
+                });
+                card.addEventListener('mouseleave', () => {
+                    card.style.transform = '';
+                });
+            });
+
+            // reveal on scroll
+            const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+            if (prefersReduced) return;
+
+            const io = new IntersectionObserver((entries) => {
+                entries.forEach(e => {
+                    if (e.isIntersecting) {
+                        e.target.classList.remove('opacity-0', 'translate-y-2');
+                        e.target.classList.add('opacity-100', 'translate-y-0');
+                        io.unobserve(e.target);
+                    }
+                });
+            }, { threshold: 0.12 });
+
+            cards.forEach(card => {
+                card.classList.add('opacity-0', 'translate-y-2');
+                io.observe(card);
+            });
+        })();
+
+
+        // < !--JS(optional): auto - stagger reveal on scroll.Add once near bottom of page. -- >
+
+        (function () {
+            const tiles = Array.from(document.querySelectorAll('.perk-tile'));
+            const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+            if (prefersReduced || tiles.length === 0) return;
+
+            // prepare
+            tiles.forEach((el) => {
+                el.classList.add('opacity-0', 'translate-y-2', 'transition', 'duration-500', 'ease-out');
+            });
+
+            const io = new IntersectionObserver((entries) => {
+                entries.forEach((e) => {
+                    if (!e.isIntersecting) return;
+                    // stagger reveal
+                    tiles.forEach((el, i) => {
+                        setTimeout(() => {
+                            el.classList.remove('opacity-0', 'translate-y-2');
+                            el.classList.add('opacity-100', 'translate-y-0');
+                        }, i * 55);
+                    });
+                    io.disconnect();
+                });
+            }, { threshold: 0.12 });
+
+            io.observe(tiles[0]);
+        })();
+
+
+        //        // =========================  Testimonial Stack (desktop) + Slider (mobile) ========================= 
+
+
+
+
+
+
+
+
+
+
+
+
+
+        (function () {
+            const section = document.getElementById('tSection');
+            if (!section) return;
+
+            // ===== DATA (replace placeholders later) =====
+            const items = [
+                {
+                    id: 'adam',
+                    name: 'Dr. Aderonke Akerele',
+                    rolePrefix: 'Founder,',
+                    company: 'Sapphire Quest Travels',
+                    companyHref: '#',
+                    mainBg: '#e9fbff',
+                    quoteMark: '#0ea5b7',
+                    quote:
+                        "Octalve helped us refine our brand presence and deliver a clean, professional branding that actually support enquiries. The process was structured, communication was clear, and they paid attention to details that matter for customer trust. Since launching, our online presentation looks more credible and easier for clients to interact with.",
+                    mediaType: 'video',
+                    videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
+                    videoThumb: '/brand/client/drronkenow.png',
+                    videoOverlayLogo: '/brand/logo/Octalve Suite.png',
+                    sideBg: '#0f766e',
+                    sideImage: '/brand/client/drronkenow.png'
+                },
+                {
+                    id: 'deon',
+                    name: 'Haleemah Abdul Azeez',
+                    rolePrefix: 'CEO at',
+                    company: 'SafedeenHq',
+                    companyHref: 'https://safedeenhq.com/',
+                    mainBg: '#f3ede4',
+                    quoteMark: '#c9b29a',
+                    quote:
+                        "Octalve helped us build a strong digital foundation—branding, website structure, and technical setup. Their delivery was thoughtful and detail-oriented, and they made the process easy even when we had multiple moving parts. We’re satisfied with the quality and professionalism.",
+                    mediaType: 'image',
+                    imageBoxBg: '#e7cdb4',
+                    imageUrl: '/brand/client/halimah.png',
+                    brandLogo: '/brand/logo/Octalve Suite.png',
+                    sideBg: '#7c6a58',
+                    sideImage: '/brand/client/halimah.png'
+                },
+                {
+                    id: 'alex',
+                    name: 'Sarah Akerele',
+                    rolePrefix: 'Founder of',
+                    company: 'IHHCounsulting',
+                    companyHref: '#',
+                    mainBg: '#fde2d7',
+                    quoteMark: '#f2a07f',
+                    quote:
+                        "Octalve brought clarity and quality to our brand logo and identity delivery. The logo is clean, aesthetic, and well organised, and their support approach is professional. I appreciated the speed, documentation, and how they made the entire process easy.",
+                    mediaType: 'image',
+                    imageBoxBg: '#ffb08a',
+                    imageUrl: '/brand/client/sarah.png',
+                    brandLogo: '/brand/logo/Octalve Suite.png',
+                    sideBg: '#8b5a3c',
+                    sideImage: '/brand/client/sarah.png'
+                }
+            ];
+            // ============================================
+
+            // Viewport helper
+            const isDesktop = () => window.matchMedia('(min-width: 1024px)').matches;
+
+            // =========================
+            // MOBILE SLIDER RENDERING
+            // =========================
+            const slider = document.getElementById('tSlider');
+            const dots = document.getElementById('tDots');
+            const btnPrev = document.getElementById('tPrev');
+            const btnNext = document.getElementById('tNext');
+
+            function mobileSlideHTML(it, idx) {
+                const mediaBlock =
+                    it.mediaType === 'video'
+                        ? `
+          <div class="rounded-[40px] bg-black p-3">
+            <div class="rounded-[32px] overflow-hidden bg-black relative">
+              <img
+                src="${it.videoThumb || 'https://placehold.co/1200x900/png?text=Video+Thumbnail'}"
+                alt="Video thumbnail"
+                class="w-full h-[360px] object-cover opacity-90"
+              />
+              <button
+                type="button"
+                class="tMobilePlay absolute inset-0 grid place-items-center"
+                data-video="${it.videoUrl}"
+                aria-label="Play video"
+              >
+                <span class="h-16 w-16 rounded-full bg-white/90 grid place-items-center text-black text-2xl font-extrabold">
+                  ▶
+                </span>
+              </button>
+            </div>
+          </div>
+        `
+                        : `
+          <div class="rounded-[40px] overflow-hidden border border-black/10" style="background:${it.imageBoxBg || '#e7cdb4'};">
+            <div class="relative">
+              <img
+                src="${it.imageUrl}"
+                alt="Portrait"
+                class="w-full h-[360px] object-cover"
+              />
+              <div class="absolute left-6 top-6">
+                <img
+                  src="${it.brandLogo || 'https://placehold.co/160x60/png?text=Brand'}"
+                  alt="Brand logo"
+                  class="h-8 w-auto object-contain"
+                />
+              </div>
+            </div>
+          </div>
+        `;
+
+                return `
+        <article
+          class="tSlide snap-center shrink-0 w-[92%] sm:w-[72%] rounded-[44px] border border-black/10 overflow-hidden"
+          data-idx="${idx}"
+          style="background:${it.mainBg};"
+        >
+          <div class="p-7">
+            ${mediaBlock}
+
+            <div class="mt-10">
+              <div class="text-7xl font-extrabold leading-none" style="color:${it.quoteMark};">“</div>
+
+              <p class="mt-6 text-2xl font-extrabold leading-snug text-black/90">
+                ${it.quote}
+              </p>
+
+              <div class="mt-10">
+                <div class="text-lg font-extrabold">${it.name}</div>
+                <div class="text-black/60 font-semibold">
+                  ${it.rolePrefix}
+                  <span class="font-extrabold" style="color:var(--primary);">${it.company}</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+      `;
+            }
+
+            function renderMobile() {
+                if (!slider || !dots) return;
+
+                slider.innerHTML = items.map(mobileSlideHTML).join('');
+
+                // dots
+                dots.innerHTML = items
+                    .map(
+                        (_, i) => `
+          <button
+            type="button"
+            class="tDot h-2.5 w-2.5 rounded-full bg-black/20"
+            data-dot="${i}"
+            aria-label="Go to slide ${i + 1}"
+          ></button>
+        `
+                    )
+                    .join('');
+
+                // dot click
+                dots.querySelectorAll('[data-dot]').forEach((b) => {
+                    b.addEventListener('click', () => {
+                        const idx = Number(b.dataset.dot);
+                        goTo(idx, true);
+                    });
+                });
+
+                // play video in-place (replace thumb with iframe)
+                slider.querySelectorAll('.tMobilePlay').forEach((btn) => {
+                    btn.addEventListener('click', () => {
+                        const url = btn.getAttribute('data-video');
+                        const wrap = btn.closest('.rounded-\\[32px\\]');
+                        if (!wrap || !url) return;
+
+                        wrap.innerHTML = `
+            <iframe
+              class="w-full h-[360px]"
+              src="${url}"
+              title="YouTube video"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          `;
+                        restartTimer();
+                    });
+                });
+
+                // arrows (sm+)
+                if (btnPrev) btnPrev.onclick = () => goTo((active - 1 + items.length) % items.length, true);
+                if (btnNext) btnNext.onclick = () => goTo((active + 1) % items.length, true);
+
+                // update active on swipe/scroll using IO
+                const slides = slider.querySelectorAll('.tSlide');
+                const io = new IntersectionObserver(
+                    (entries) => {
+                        const visible = entries
+                            .filter((e) => e.isIntersecting)
+                            .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
+
+                        if (!visible) return;
+                        const idx = Number(visible.target.getAttribute('data-idx'));
+                        if (!Number.isNaN(idx) && idx !== active) {
+                            active = idx;
+                            updateDots();
+                            restartTimer();
+                        }
+                    },
+                    { root: slider, threshold: [0.55, 0.7] }
+                );
+
+                slides.forEach((s) => io.observe(s));
+                updateDots();
+            }
+
+            // FIXED: ONLY scroll the slider container (not the page)
+            function scrollToMobile(idx, smooth) {
+                if (!slider) return;
+
+                const target = slider.querySelector(`.tSlide[data-idx="${idx}"]`);
+                if (!target) return;
+
+                const left = target.offsetLeft - (slider.clientWidth - target.clientWidth) / 2;
+
+                slider.scrollTo({
+                    left: Math.max(0, left),
+                    behavior: smooth ? 'smooth' : 'auto'
+                });
+            }
+
+            function updateDots() {
+                if (!dots) return;
+                dots.querySelectorAll('.tDot').forEach((d, i) => {
+                    d.classList.toggle('bg-black/70', i === active);
+                    d.classList.toggle('bg-black/20', i !== active);
+                });
+            }
+
+            // =========================
+            // DESKTOP STACK BEHAVIOR
+            // =========================
+            const elLeft = document.getElementById('tLeft');
+            const elRight = document.getElementById('tRight');
+            const elHidden = document.getElementById('tHidden');
+
+            const elMain = document.getElementById('tMain');
+            const elQuoteMark = document.getElementById('tQuoteMark');
+            const elQuote = document.getElementById('tQuote');
+            const elName = document.getElementById('tName');
+            const elRolePrefix = document.getElementById('tRolePrefix');
+            const elCompany = document.getElementById('tCompany');
+
+            const elVideoWrap = document.getElementById('tVideoWrap');
+            const elVideoThumb = document.getElementById('tVideoThumb');
+            const elPlayBtn = document.getElementById('tPlayBtn');
+            const elVideoOverlayLogo = document.getElementById('tVideoOverlayLogo');
+
+            const elImageWrap = document.getElementById('tImageWrap');
+            const elImageBox = document.getElementById('tImageBox');
+            const elImage = document.getElementById('tImage');
+            const elBrandLogo = document.getElementById('tBrandLogo');
+
+            const sideNodes = items.map((it, idx) => {
+                const btn = document.createElement('button');
+                btn.type = 'button';
+                btn.dataset.idx = String(idx);
+                btn.className =
+                    'relative w-[150px] xl:w-[160px] h-[520px] rounded-[36px] overflow-hidden border border-black/10 shadow-sm ' +
+                    'transition duration-300 ease-out hover:-translate-y-1 hover:shadow-md focus:outline-none focus:ring-2 focus:ring-black/20';
+
+                btn.innerHTML = `
+        <div class="absolute inset-0" style="background:${it.sideBg};"></div>
+        <img src="${it.sideImage}" alt="${it.name}" class="absolute inset-0 w-full h-full object-cover opacity-90" />
+        <div class="absolute inset-0 bg-black/25"></div>
+        <div class="absolute inset-x-0 bottom-0 h-44 bg-gradient-to-t from-black/80 to-transparent"></div>
+
+        <div class="absolute left-5 bottom-6">
+          <div class="text-white font-extrabold text-base"
+               style="writing-mode:vertical-rl; transform: rotate(180deg);">
+            ${it.name}
+          </div>
+          <div class="mt-2 text-white/80 text-xs font-semibold"
+               style="writing-mode:vertical-rl; transform: rotate(180deg);">
+            ${it.rolePrefix} ${it.company}
+          </div>
+        </div>
+      `;
+                return btn;
+            });
+
+            if (elHidden) sideNodes.forEach((n) => elHidden.appendChild(n));
+
+            function placeSideCards() {
+                if (!elLeft || !elRight || !elHidden) return;
+
+                sideNodes.forEach((node, idx) => {
+                    if (idx < active) elLeft.appendChild(node);
+                    else if (idx > active) elRight.appendChild(node);
+                    else elHidden.appendChild(node);
+                });
+
+                elLeft.classList.toggle('hidden', elLeft.children.length === 0);
+                elRight.classList.toggle('hidden', elRight.children.length === 0);
+            }
+
+            let currentVideoLoaded = false;
+
+            function setMain(direction) {
+                const it = items[active];
+
+                elMain.classList.add('opacity-0');
+                elMain.style.transform = `translateX(${direction === 'right' ? '-10px' : '10px'})`;
+
+                setTimeout(() => {
+                    elMain.style.background = it.mainBg;
+                    elQuoteMark.style.color = it.quoteMark;
+
+                    elQuote.textContent = it.quote;
+                    elName.textContent = it.name;
+                    elRolePrefix.textContent = it.rolePrefix + ' ';
+                    elCompany.textContent = it.company;
+                    elCompany.href = it.companyHref || '#';
+
+                    currentVideoLoaded = false;
+
+                    if (it.mediaType === 'video') {
+                        elImageWrap.classList.add('hidden');
+                        elVideoWrap.classList.remove('hidden');
+
+                        elVideoThumb.src = it.videoThumb || 'https://placehold.co/1200x900/png?text=Video+Thumbnail';
+                        elVideoOverlayLogo.src = it.videoOverlayLogo || 'https://placehold.co/220x70/png?text=Overlay+Logo';
+
+                        const container = elPlayBtn ? elPlayBtn.closest('.rounded-\\[32px\\]') : null;
+                        if (container) {
+                            container.innerHTML = `
+              <img id="tVideoThumb" src="${elVideoThumb.src}" alt="Video thumbnail placeholder" class="w-full h-[420px] object-cover opacity-90" />
+              <button id="tPlayBtn" type="button" class="absolute inset-0 grid place-items-center" aria-label="Play video">
+                <span class="h-16 w-16 rounded-full bg-white/90 grid place-items-center text-black text-2xl font-extrabold">▶</span>
+              </button>
+            `;
+                        }
+                    } else {
+                        elVideoWrap.classList.add('hidden');
+                        elImageWrap.classList.remove('hidden');
+
+                        elImageBox.style.background = it.imageBoxBg || '#e7cdb4';
+                        elImage.src = it.imageUrl;
+                        elBrandLogo.src = it.brandLogo || 'https://placehold.co/160x60/png?text=Brand';
+                    }
+
+                    requestAnimationFrame(() => {
+                        elMain.classList.remove('opacity-0');
+                        elMain.style.transform = 'translateX(0)';
+                    });
+                }, 240);
+            }
+
+            sideNodes.forEach((node) => {
+                node.addEventListener('click', () => {
+                    const idx = Number(node.dataset.idx);
+                    if (!Number.isNaN(idx)) goTo(idx, true);
+                });
+            });
+
+            // =========================
+            // SHARED ROTATION (30 sec)
+            // =========================
+            let active = 0;
+            let timer = null;
+
+            // FIX: prevent repeated "resize" (mobile address bar) from forcing paint + scroll
+            let hasActivated = false;
+            let lastMode = isDesktop() ? 'desktop' : 'mobile';
+
+            function goTo(idx, userAction) {
+                if (idx === active) return;
+                const direction = idx > active ? 'right' : 'left';
+                active = idx;
+
+                if (isDesktop()) {
+                    placeSideCards();
+                    setMain(direction);
+                } else {
+                    updateDots();
+                    scrollToMobile(active, true); // smooth inside slider only
+                }
+
+                if (userAction) restartTimer();
+            }
+
+            function next() {
+                goTo((active + 1) % items.length, false);
+            }
+
+            function startTimer() {
+                stopTimer();
+                timer = setInterval(next, 30000);
+            }
+
+            function stopTimer() {
+                if (timer) clearInterval(timer);
+                timer = null;
+            }
+
+            function restartTimer() {
+                startTimer();
+            }
+
+            const deck = document.getElementById('tDeck');
+            if (deck) {
+                deck.addEventListener('mouseenter', stopTimer);
+                deck.addEventListener('mouseleave', startTimer);
+            }
+
+            // Init: render mobile slides once
+            renderMobile();
+
+            // Play desktop video inline when clicking play
+            section.addEventListener('click', (e) => {
+                const play = e.target.closest('#tPlayBtn');
+                if (!play) return;
+                if (!isDesktop()) return;
+
+                const it = items[active];
+                if (it.mediaType !== 'video') return;
+
+                const wrap = play.closest('.rounded-\\[32px\\]');
+                if (!wrap) return;
+
+                wrap.innerHTML = `
+        <iframe
+          class="w-full h-[420px]"
+          src="${it.videoUrl}"
+          title="YouTube video"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        ></iframe>
+      `;
+                restartTimer();
+            });
+
+            function paintInitial() {
+                if (isDesktop()) {
+                    placeSideCards();
+                    setMain('right');
+                } else {
+                    updateDots();
+                    scrollToMobile(active, false); // auto (no page jump)
+                }
+            }
+
+            // Start only when visible
+            const io = new IntersectionObserver(
+                (entries) => {
+                    entries.forEach((en) => {
+                        if (!en.isIntersecting) return;
+
+                        hasActivated = true; // FIX
+                        lastMode = isDesktop() ? 'desktop' : 'mobile';
+
+                        paintInitial();
+                        startTimer();
+                        io.disconnect();
+                    });
+                },
+                { threshold: 0.15 }
+            );
+
+            io.observe(section);
+
+            // On resize: ONLY repaint if mode changes (desktop <-> mobile)
+            let resizeLock = null;
+            window.addEventListener('resize', () => {
+                clearTimeout(resizeLock);
+                resizeLock = setTimeout(() => {
+                    if (!hasActivated) return;
+
+                    const mode = isDesktop() ? 'desktop' : 'mobile';
+                    if (mode === lastMode) return; // ignore mobile address-bar resize noise
+
+                    lastMode = mode;
+                    paintInitial();
+                }, 150);
+            });
+        })();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        //        // ========================= FAQ Accordion + Show More =========================  
+
+
+        (function () {
+            const root = document.getElementById('faq');
+            if (!root) return;
+
+            const items = Array.from(root.querySelectorAll('.faq-item'));
+            const showMoreBtn = document.getElementById('faqShowMore');
+            const showMoreText = document.getElementById('faqShowMoreText');
+            const chevron = document.getElementById('faqChevron');
+
+            // show only first N by default (like doola "show more")
+            const DEFAULT_VISIBLE = 7; // you can change this
+            let expandedList = false;
+
+            function setItemState(item, open) {
+                const btn = item.querySelector('.faq-btn');
+                const panel = item.querySelector('.faq-panel');
+                const xIcon = item.querySelector('.faq-x');
+                const plusIcon = item.querySelector('.faq-plus');
+
+                btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+                panel.classList.toggle('hidden', !open);
+                xIcon.classList.toggle('hidden', !open);
+                plusIcon.classList.toggle('hidden', open);
+            }
+
+            // Accordion behavior (only one open at a time)
+            function closeAllExcept(exceptItem) {
+                items.forEach((it) => {
+                    if (it === exceptItem) return;
+                    setItemState(it, false);
+                });
+            }
+
+            // Initialize: first open, others closed
+            items.forEach((it, idx) => {
+                setItemState(it, idx === 0);
+            });
+
+            // Handle clicks
+            items.forEach((it) => {
+                const btn = it.querySelector('.faq-btn');
+                btn.addEventListener('click', () => {
+                    const isOpen = btn.getAttribute('aria-expanded') === 'true';
+                    closeAllExcept(it);
+                    setItemState(it, !isOpen);
+                });
+            });
+
+            // Show More behavior: if you later add more FAQ items, it will collapse/expand.
+            function applyListVisibility() {
+                // If you have exactly these 7, show more won't hide anything, but still works.
+                items.forEach((it, idx) => {
+                    const shouldShow = expandedList ? true : idx < DEFAULT_VISIBLE;
+                    it.classList.toggle('hidden', !shouldShow);
+                });
+
+                showMoreText.textContent = expandedList ? 'Show Less' : 'Show More';
+                chevron.style.transform = expandedList ? 'rotate(180deg)' : 'rotate(0deg)';
+
+                // If total <= DEFAULT_VISIBLE, hide button
+                if (items.length <= DEFAULT_VISIBLE) {
+                    showMoreBtn.classList.add('hidden');
+                }
+            }
+
+            applyListVisibility();
+
+            showMoreBtn.addEventListener('click', () => {
+                expandedList = !expandedList;
+                applyListVisibility();
+            });
+        })();
+
+        //       // ========================= CTA Video Placeholder to YouTube Iframe Swap =========================
+
+        (function () {
+            const wrap = document.getElementById('ctaMedia');
+            const play = document.getElementById('ctaPlay');
+            if (!wrap || !play) return;
+
+            // Placeholder YouTube link (replace later)
+            const YT = 'https://www.youtube.com/embed/dQw4w9WgXcQ';
+
+            play.addEventListener('click', () => {
+                // Swap image placeholder to iframe video (only when clicked)
+                wrap.innerHTML = `
+            <div class="rounded-[28px] sm:rounded-[34px] overflow-hidden">
+              <iframe
+                class="w-full aspect-[3/2] sm:aspect-[16/10]"
+                src="${YT}"
+                title="YouTube video"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+              ></iframe>
+            </div>
+          `;
+            });
+        })();
+
+
+    </script>
+
+</body>
+
+</html>

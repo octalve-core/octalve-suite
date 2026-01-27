@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Octalve Suite™ | Home </title>
+    <link rel="icon" type="image/png" href="/brand/Octalveicon.png" />
+
+    <!-- Google Font: Barlow (page-wide) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Material Symbols (icons) -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,500,0,0" />
+
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+        :root {
+            --promo-bg: #dbe7ff;
+            --nav-bg: #fbf1c8;
+            --text: #0b1220;
+            --muted: #55627a;
+            --border: rgba(15, 23, 42, .12);
+
+            --primary: #0064E0;
+            --btn-dark: #0b0b0c;
+        }
+
+        html,
+        body {
+            font-family: "Barlow", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+            color: var(--text);
+        }
+
+        .icon {
+            font-family: "Material Symbols Rounded";
+            font-weight: 500;
+            font-style: normal;
+            line-height: 1;
+            display: inline-flex;
+            vertical-align: middle;
+        }
+
+        .soft-border {
+            border: 1px solid var(--border);
+        }
+
+        .container-max {
+            max-width: 1180px;
+        }
+    </style>
+</head>
+
+
+
+<body class="bg-white text-black">
+    <!-- HEADER INCLUDE -->
+    <div data-include="/components/header.html"></div>
+
+    <!-- PAGE CONTENT -->
+    <main>
+        <!-- Your sections go here -->
+    </main>
+
+    <!-- Include loader -->
+    <script src="/assets/include.js" defer></script>
+    <script src="/assets/layout.js" defer></script>
+
+
+    <!-- PAGE CONTENT BELOW -->
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Contact Info Section (HTML + TailwindCSS) -->
+    <!-- Uses inline SVG icons (internet source via SVG paths) + optional small JS hover polish -->
+
+    <section class="bg-white">
+        <div class="mx-auto max-w-7xl px-5 py-14 sm:px-6 sm:py-16 lg:py-24">
+            <!-- Eyebrow -->
+            <div class="text-center">
+                <div class="text-sm font-semibold tracking-[0.35em] text-blue-600">
+                    Contact Info
+                </div>
+
+                <h2 class="mt-6 text-3xl font-extrabold leading-tight tracking-tight text-slate-800 sm:text-5xl">
+                    Reach Out to Us for any<br class="hidden sm:block" />
+                    Inquiries or Support
+                </h2>
+            </div>
+
+            <!-- Cards -->
+            <div class="mt-12 grid gap-6 sm:mt-14 sm:grid-cols-2 lg:grid-cols-3">
+                <!-- Location -->
+                <div
+                    class="group rounded-3xl bg-white p-6 shadow-[0_15px_60px_rgba(0,0,0,0.06)] ring-1 ring-black/5 transition hover:-translate-y-0.5 hover:shadow-[0_25px_80px_rgba(0,0,0,0.09)]">
+                    <div class="flex items-center gap-5">
+                        <div
+                            class="grid h-20 w-20 place-items-center rounded-full bg-red-600 text-white ring-1 ring-black/5">
+                            <!-- Icon: Map Pin (Heroicons-style path) -->
+                            <svg class="h-9 w-9" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                                <path d="M12 22s7-5.2 7-12a7 7 0 10-14 0c0 6.8 7 12 7 12z" stroke="currentColor"
+                                    stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M12 10.2a2.2 2.2 0 100-4.4 2.2 2.2 0 000 4.4z" stroke="currentColor"
+                                    stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </div>
+
+                        <div>
+                            <div class="text-xl font-extrabold text-slate-800">Location:</div>
+                            <div class="mt-1 text-base font-medium text-slate-600">
+                                Wuye, Abuja, Nigeria.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Phone -->
+                <div
+                    class="group rounded-3xl bg-white p-6 shadow-[0_15px_60px_rgba(0,0,0,0.06)] ring-1 ring-black/5 transition hover:-translate-y-0.5 hover:shadow-[0_25px_80px_rgba(0,0,0,0.09)]">
+                    <div class="flex items-center gap-5">
+                        <div
+                            class="grid h-20 w-20 place-items-center rounded-full bg-blue-600 text-white ring-1 ring-black/5">
+                            <!-- Icon: Phone -->
+                            <svg class="h-9 w-9" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                                <path
+                                    d="M22 16.9v3a2 2 0 01-2.2 2 19.8 19.8 0 01-8.6-3.1A19.4 19.4 0 013.2 10.8 19.8 19.8 0 01.1 2.2 2 2 0 012.1 0h3a2 2 0 012 1.7c.1.8.3 1.6.6 2.4a2 2 0 01-.4 2.1L6 7.8a16 16 0 008.2 8.2l1.6-1.3a2 2 0 012.1-.4c.8.3 1.6.5 2.4.6A2 2 0 0122 16.9z"
+                                    fill="currentColor" />
+                            </svg>
+                        </div>
+
+                        <div>
+                            <div class="text-xl font-extrabold text-slate-800">Phone:</div>
+                            <a href="tel:+2348073459090"
+                                class="mt-1 block text-base font-medium text-slate-600 hover:text-slate-900">
+                                +2348073459090
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Email -->
+                <div
+                    class="group rounded-3xl bg-white p-6 shadow-[0_15px_60px_rgba(0,0,0,0.06)] ring-1 ring-black/5 transition hover:-translate-y-0.5 hover:shadow-[0_25px_80px_rgba(0,0,0,0.09)]">
+                    <div class="flex items-center gap-5">
+                        <div
+                            class="grid h-20 w-20 place-items-center rounded-full bg-green-600 text-white ring-1 ring-black/5">
+                            <!-- Icon: Mail -->
+                            <svg class="h-9 w-9" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                                <path d="M4 6h16a2 2 0 012 2v10a2 2 0 01-2 2H4a2 2 0 01-2-2V8a2 2 0 012-2z"
+                                    stroke="currentColor" stroke-width="2.2" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                <path d="M22 8l-10 7L2 8" stroke="currentColor" stroke-width="2.2"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </div>
+
+                        <div>
+                            <div class="text-xl font-extrabold text-slate-800">Email:</div>
+                            <a href="mailto:info@octalve.com"
+                                class="mt-1 block text-base font-medium text-slate-600 hover:text-slate-900">
+                                info@octalve.com
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Optional tiny polish: subtle "press" effect on tap for mobile
+        (function () {
+            const cards = document.querySelectorAll(".group.rounded-3xl");
+            cards.forEach((card) => {
+                card.addEventListener("touchstart", () => card.classList.add("scale-[0.99]"), { passive: true });
+                card.addEventListener("touchend", () => card.classList.remove("scale-[0.99]"), { passive: true });
+            });
+        })();
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- FOOTER SECTION -->
+
+    <div data-include="/components/footer.html"></div>
+
+</body>
+
+</html>

@@ -2,8 +2,51 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,500,0,0');
+
 :root {
   color-scheme: light;
+  --promo-bg: #dbe7ff;
+  --nav-bg: #fbf1c8;
+  --text: #0b1220;
+  --muted: #55627a;
+  --border: rgba(15, 23, 42, .12);
+  --primary: #0064E0;
+  --btn-dark: #0b0b0c;
+}
+
+html,
+body {
+  height: 100%;
+  font-family: "Barlow", sans-serif;
+  color: var(--text);
+  scroll-behavior: smooth;
+}
+
+.icon {
+  font-family: "Material Symbols Rounded";
+  font-weight: 500;
+  font-style: normal;
+  line-height: 1;
+  display: inline-flex;
+  vertical-align: middle;
+}
+
+.soft-border {
+  border: 1px solid var(--border);
+}
+
+.container-max {
+  max-width: 1180px;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 
 html,
