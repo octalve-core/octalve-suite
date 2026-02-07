@@ -33,7 +33,7 @@ export default function LoginPage() {
           </CardDescription>
         </CardHeader>
         <CardContent className="space-y-4">
-          <Button className="w-full" size="lg" asChild>
+          <Button size="lg" asChild className="text-black w-full hover:bg-black hover:text-white">
             <LoginLink postLoginRedirectURL="/dashboard">Sign in</LoginLink>
           </Button>
 
@@ -46,7 +46,7 @@ export default function LoginPage() {
             </div>
           </div>
 
-          <Button variant="outline" className="w-full" size="lg" asChild>
+          <Button variant="outline" className="w-full text-black hover:bg-black hover:text-white" size="lg" asChild>
             <RegisterLink postLoginRedirectURL="/dashboard">
               Create an account
             </RegisterLink>
