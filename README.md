@@ -1,4 +1,4 @@
-# Octalve Suite
+# Octalve Suite (Local Dev Scaffold)
 
 Streamline project delivery from creation to completion, ensuring seamless collaboration between teams and clients.
 
@@ -126,6 +126,7 @@ octalve-suite/
 ```
 
 ## Next.js Project Structure
+## Project Structure
 
 ```
 octalve-suite/

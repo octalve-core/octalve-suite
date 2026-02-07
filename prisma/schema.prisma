@@ -1,0 +1,261 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+// ============================================
+// User & Authentication
+// ============================================
+
+model User {
+  id        String   @id @default(cuid())
+  email     String   @unique
+  fullName  String   @map("full_name")
+  role      UserRole @default(client)
+  createdAt DateTime @default(now()) @map("created_at")
+  updatedAt DateTime @updatedAt @map("updated_at")
+
+  // Relations
+  messagesCreated    Message[]
+  approvalsRequested Approval[] @relation("RequestedBy")
+  approvalsResponded Approval[] @relation("RespondedBy")
+
+  @@map("users")
+}
+
+enum UserRole {
+  admin
+  client
+}
+
+// ============================================
+// Team Management
+// ============================================
+
+model TeamMember {
+  id                String         @id @default(cuid())
+  email             String         @unique
+  name              String
+  role              TeamMemberRole
+  avatarUrl         String?        @map("avatar_url")
+  activePhasesCount Int            @default(0) @map("active_phases_count")
+  createdAt         DateTime       @default(now()) @map("created_at")
+  updatedAt         DateTime       @updatedAt @map("updated_at")
+
+  // Relations
+  assignedPhases  Phase[]
+  managedProjects Project[]
+
+  @@map("team_members")
+}
+
+enum TeamMemberRole {
+  pm
+  designer
+  developer
+  strategist
+  copywriter
+}
+
+// ============================================
+// Projects
+// ============================================
+
+model Project {
+  id                   String        @id @default(cuid())
+  name                 String
+  clientName           String        @map("client_name")
+  clientEmail          String        @map("client_email")
+  suiteType            SuiteType     @map("suite_type")
+  status               ProjectStatus @default(active)
+  progressPercentage   Int           @default(0) @map("progress_percentage")
+  targetCompletionDate DateTime?     @map("target_completion_date")
+  internalNotes        String?       @map("internal_notes")
+  tags                 String?       // JSON array stored as string
+  projectCode          String?       @unique @map("project_code")
+  createdAt            DateTime      @default(now()) @map("created_at")
+  updatedAt            DateTime      @updatedAt @map("updated_at")
+
+  // Relations
+  assignedPm   TeamMember? @relation(fields: [assignedPmId], references: [id])
+  assignedPmId String?     @map("assigned_pm_id")
+  phases       Phase[]
+  deliverables Deliverable[]
+  approvals    Approval[]
+  messages     Message[]
+
+  @@map("projects")
+}
+
+enum SuiteType {
+  launch
+  impact
+  growth
+  partner
+}
+
+enum ProjectStatus {
+  active
+  awaiting_approval
+  at_risk
+  completed
+  archived
+}
+
+// ============================================
+// Phases
+// ============================================
+
+model Phase {
+  id             String      @id @default(cuid())
+  name           String
+  order          Int
+  status         PhaseStatus @default(not_started)
+  description    String?
+  dueDate        DateTime?   @map("due_date")
+  approvedAt     DateTime?   @map("approved_at")
+  approvedBy     String?     @map("approved_by")
+  assignedToName String?     @map("assigned_to_name")
+  createdAt      DateTime    @default(now()) @map("created_at")
+  updatedAt      DateTime    @updatedAt @map("updated_at")
+
+  // Relations
+  project      Project       @relation(fields: [projectId], references: [id], onDelete: Cascade)
+  projectId    String        @map("project_id")
+  assignedTo   TeamMember?   @relation(fields: [assignedToId], references: [id])
+  assignedToId String?       @map("assigned_to_id")
+  deliverables Deliverable[]
+  approvals    Approval[]
+  messages     Message[]
+
+  @@map("phases")
+}
+
+enum PhaseStatus {
+  not_started
+  in_progress
+  awaiting_approval
+  approved
+  changes_requested
+}
+
+// ============================================
+// Deliverables
+// ============================================
+
+model Deliverable {
+  id          String              @id @default(cuid())
+  name        String
+  link        String?
+  linkType    DeliverableLinkType @default(other) @map("link_type")
+  status      DeliverableStatus   @default(draft)
+  description String?
+  order       Int                 @default(0)
+  createdAt   DateTime            @default(now()) @map("created_at")
+  updatedAt   DateTime            @updatedAt @map("updated_at")
+
+  // Relations
+  project   Project @relation(fields: [projectId], references: [id], onDelete: Cascade)
+  projectId String  @map("project_id")
+  phase     Phase   @relation(fields: [phaseId], references: [id], onDelete: Cascade)
+  phaseId   String  @map("phase_id")
+
+  @@map("deliverables")
+}
+
+enum DeliverableLinkType {
+  figma
+  drive
+  web
+  other
+}
+
+enum DeliverableStatus {
+  draft
+  ready_for_review
+  updated
+  approved
+}
+
+// ============================================
+// Approvals
+// ============================================
+
+model Approval {
+  id          String         @id @default(cuid())
+  requestedAt DateTime       @default(now()) @map("requested_at")
+  status      ApprovalStatus @default(pending)
+  respondedAt DateTime?      @map("responded_at")
+  feedback    String?
+  createdAt   DateTime       @default(now()) @map("created_at")
+  updatedAt   DateTime       @updatedAt @map("updated_at")
+
+  // Relations
+  project       Project @relation(fields: [projectId], references: [id], onDelete: Cascade)
+  projectId     String  @map("project_id")
+  phase         Phase   @relation(fields: [phaseId], references: [id], onDelete: Cascade)
+  phaseId       String  @map("phase_id")
+  requestedBy   User?   @relation("RequestedBy", fields: [requestedById], references: [id])
+  requestedById String? @map("requested_by_id")
+  respondedBy   User?   @relation("RespondedBy", fields: [respondedById], references: [id])
+  respondedById String? @map("responded_by_id")
+
+  @@map("approvals")
+}
+
+enum ApprovalStatus {
+  pending
+  approved
+  changes_requested
+}
+
+// ============================================
+// Messages
+// ============================================
+
+model Message {
+  id          String      @id @default(cuid())
+  content     String
+  messageType MessageType @default(user) @map("message_type")
+  isResolved  Boolean     @default(false) @map("is_resolved")
+  createdAt   DateTime    @default(now()) @map("created_at")
+  updatedAt   DateTime    @updatedAt @map("updated_at")
+
+  // Relations
+  project   Project  @relation(fields: [projectId], references: [id], onDelete: Cascade)
+  projectId String   @map("project_id")
+  phase     Phase    @relation(fields: [phaseId], references: [id], onDelete: Cascade)
+  phaseId   String   @map("phase_id")
+  sender    User?    @relation(fields: [senderId], references: [id])
+  senderId  String?  @map("sender_id")
+  replyTo   Message? @relation("Replies", fields: [replyToId], references: [id])
+  replyToId String?  @map("reply_to_id")
+  replies   Message[] @relation("Replies")
+
+  @@map("messages")
+}
+
+enum MessageType {
+  user
+  system
+}
+
+// ============================================
+// Templates
+// ============================================
+
+model Template {
+  id          String    @id @default(cuid())
+  name        String
+  suiteType   SuiteType @map("suite_type")
+  description String?
+  phases      String    // JSON array stored as string
+  createdAt   DateTime  @default(now()) @map("created_at")
+  updatedAt   DateTime  @updatedAt @map("updated_at")
+
+  @@map("templates")
+}

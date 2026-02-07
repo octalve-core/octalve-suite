@@ -1,0 +1,301 @@
+<!-- components/footer.html -->
+
+<!-- CTA BANNER SECTION (paste below previous sections) -->
+<section id="ctaBanner" class="w-full bg-white">
+    <div class="max-w-7xl mx-auto px-4 py-14 md:py-20">
+        <div class="rounded-[44px] md:rounded-[56px] overflow-hidden border border-black/5"
+            style="background: var(--soft-cta, #E5ECFF);">
+            <div class="grid grid-cols-1 lg:grid-cols-12 items-center gap-10 px-8 sm:px-12 lg:px-16 py-12 lg:py-16">
+                <!-- LEFT (Text) -->
+                <div class="lg:col-span-6">
+                    <h3 class="text-4xl sm:text-5xl font-extrabold tracking-tight leading-tight text-black">
+                        Less blah,<br />
+                        More Sales
+                    </h3>
+
+                    <p class="mt-5 text-base sm:text-lg font-semibold text-black/70">
+                        Join Octalve and scale building today.
+                    </p>
+
+                    <div class="mt-8 flex flex-col sm:flex-row sm:items-center gap-4">
+                        <a href="/Startnow/"
+                            class="inline-flex items-center justify-center gap-2 rounded-full bg-black text-white px-7 py-3.5 font-semibold shadow-sm hover:opacity-90 transition">
+                            Free 30min. Call
+                            <span class="text-lg leading-none">›</span>
+                        </a>
+
+                        <a href="/contact/"
+                            class="inline-flex items-center justify-center rounded-full bg-white/70 text-black px-7 py-3.5 font-semibold border border-black/10 hover:bg-white transition">
+                            Book a Demo
+                        </a>
+                    </div>
+                </div>
+
+                <!-- RIGHT (Illustration / Video Placeholder) -->
+                <div class="lg:col-span-6">
+                    <div class="relative mx-auto w-full max-w-xl">
+                        <!-- IMAGE PLACEHOLDER -->
+                        <div id="ctaMedia" class="relative rounded-[28px] sm:rounded-[34px] overflow-hidden">
+                            <img id="ctaImg" src="/brand/OctalveSuiteTM0.png" alt="CTA illustration"
+                                class="w-full h-auto object-cover" />
+
+                            <!-- OPTIONAL play overlay (click to swap to YouTube iframe) -->
+                            <!-- <button id="ctaPlay" type="button" class="absolute inset-0 grid place-items-center"
+                                        aria-label="Play video">
+                                        <span
+                                            class="h-16 w-16 rounded-full bg-white/90 grid place-items-center text-black text-2xl font-extrabold shadow-sm">
+                                            ▶
+                                        </span>
+                                    </button>
+                                </div>
+    
+                                    <!-- Decorative: subtle shadow base like screenshot -->
+                            <div class="absolute -bottom-8 left-10 right-10 h-10 rounded-[999px] bg-black/5 blur-xl"
+                                aria-hidden="true"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+</section>
+
+
+
+
+<footer class="w-full bg-white border-t border-black/10">
+
+    <div class="max-w-7xl mx-auto px-4 py-14 md:py-16">
+        <!-- Top: Brand + Newsletter -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10">
+            <!-- Brand -->
+            <div class="lg:col-span-6">
+                <a href="/" class="inline-flex items-center gap-3">
+                    <img src="/brand/logo/Octalve Suite.png" alt="Logo" class="h-10 w-auto object-contain" />
+                </a>
+
+                <p class="mt-6 max-w-xl text-black/70 leading-relaxed font-secondary">
+                    Octalve Suite™ is our all-in-one production house designed to take you from "idea" to
+                    "market-ready."
+                    Whether you are a solo founder, a
+                    growing NGO, or an agency looking for a reliable production partner, our specialized suites provide
+                    the foundation you
+                    need.
+                </p>
+            </div>
+
+            <!-- Newsletter -->
+            <div class="lg:col-span-6 lg:pl-10">
+                <div class="font-primary font-extrabold text-black/90 text-lg">
+                    Join Octalve Suite's monthly newsletter
+                </div>
+
+                <form id="newsletterForm" class="mt-4">
+                    <div class="flex flex-col sm:flex-row gap-3 sm:items-center">
+                        <div class="flex-1">
+                            <label class="sr-only" for="newsletterEmail">Email</label>
+                            <input id="newsletterEmail" type="email" placeholder="Enter your email"
+                                class="w-full rounded-full bg-black/5 px-6 py-3.5 outline-none border border-black/10 focus:border-black/30 font-secondary"
+                                required />
+                        </div>
+
+                        <button type="submit"
+                            class="inline-flex items-center justify-center gap-2 rounded-full bg-black text-white px-7 py-3.5 font-primary font-extrabold hover:opacity-90 transition">
+                            Subscribe <span aria-hidden="true">›</span>
+                        </button>
+                    </div>
+
+                    <p id="newsletterMsg" class="mt-3 text-sm font-secondary text-black/60 hidden"></p>
+
+                    <p class="mt-4 text-sm font-secondary text-black/60">
+                        By subscribing you agree with our
+                        <a href="#" class="text-[color:var(--primary)] font-bold hover:underline">Privacy Policy</a>
+                    </p>
+                </form>
+            </div>
+        </div>
+
+        <!-- Links grid -->
+        <div class="mt-16 grid grid-cols-2 md:grid-cols-4 gap-10">
+            <!-- Column 1 -->
+            <div>
+                <h4 class="font-primary font-extrabold text-black">Suites</h4>
+                <ul class="mt-6 space-y-4 font-secondary text-black/70">
+                    <li><a class="hover:text-black" href="#">Launch-Suite</a></li>
+                    <li><a class="hover:text-black" href="#">Impact-Suite</a></li>
+                    <li><a class="hover:text-black" href="#">Growth-Suite</a></li>
+                    <li><a class="hover:text-black" href="#">Partner-Suite</a></li>
+                </ul>
+            </div>
+
+            <!-- Column 2 -->
+            <div>
+                <h4 class="font-primary font-extrabold text-black">Company</h4>
+                <ul class="mt-6 space-y-4 font-secondary text-black/70">
+                    <li><a class="hover:text-black" href="https://octalve.com/who-we-are/">About Octalve</a></li>
+                    <li><a class="hover:text-black" href="https://octalve.com/consult/">Octalve Consult</a></li>
+                    <li><a class="hover:text-black" href="https://octalve.com/lab/">Octalve Lab</a></li>
+                    <li><a class="hover:text-black" href="https://octalve.cloud/">Octalve Cloud</a></li>
+                    <li><a class="hover:text-black" href="https://octalve.com/leap/">Octalve Leap</a></li>
+                    <li><a class="hover:text-black" href="https://vault.octalve.com/">Octalve Vault</a></li>
+                    <li><a class="hover:text-black" href="/pricing/">Octalve Suite</a></li>
+                </ul>
+            </div>
+
+            <!-- Column 3 -->
+            <div>
+                <h4 class="font-primary font-extrabold text-black">Compare</h4>
+                <ul class="mt-6 space-y-4 font-secondary text-black/70">
+                    <li><a class="hover:text-black" href="#">Octalve Suite vs.</a></li>
+                    <li><a class="hover:text-black" href="#">Octalve Suite vs. </a></li>
+                    <li><a class="hover:text-black" href="#">Octalve Suite vs.</a></li>
+                    <li><a class="hover:text-black" href="#">Octalve Suite vs.</a></li>
+                    <li><a class="hover:text-black" href="#">Octalve Suite vs.</a></li>
+                    <li><a class="hover:text-black" href="#">Octalve Suite vs.</a></li>
+                </ul>
+            </div>
+
+            <!-- 
+                        <div>
+                            <h4 class="font-primary font-extrabold text-black">Compare</h4>
+                            <ul class="mt-6 space-y-4 font-secondary text-black/70">
+                                <li><a class="hover:text-black" href="#">Octalve Suite vs. Stripe Atlas</a></li>
+                                <li><a class="hover:text-black" href="#">Octalve Suite vs. LegalZoom</a></li>
+                                <li><a class="hover:text-black" href="#">Octalve Suite vs. ZenBusiness</a></li>
+                                <li><a class="hover:text-black" href="#">Octalve Suite vs. Bench</a></li>
+                                <li><a class="hover:text-black" href="#">Octalve Suite vs. Quickbooks</a></li>
+                                <li><a class="hover:text-black" href="#">Octalve Suite vs. Alternatives</a></li>
+                            </ul>
+                        </div> -->
+
+            <!-- Column 4 -->
+            <div>
+                <h4 class="font-primary font-extrabold text-black">Learn</h4>
+                <ul class="mt-6 space-y-4 font-secondary text-black/70">
+                    <li><a class="hover:text-black" href="#">branding</a></li>
+                    <li><a class="hover:text-black" href="#">NGO</a></li>
+                    <li><a class="hover:text-black" href="#">Founder</a></li>
+                    <li><a class="hover:text-black" href="#">Strategist</a></li>
+                    <li><a class="hover:text-black" href="#">SME</a></li>
+                    <li><a class="hover:text-black" href="#">Personal</a></li>
+                    <li><a class="hover:text-black" href="#">Enterprise</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Divider -->
+        <div class="mt-16 border-t border-black/10"></div>
+
+        <!-- Bottom row -->
+        <div class="pt-8 flex flex-col md:flex-row md:items-center md:justify-between gap-6">
+            <!-- Left: YC + Copyright -->
+            <div class="flex flex-col sm:flex-row sm:items-center gap-4 sm:gap-8">
+                <!-- <div class="flex items-center gap-2 font-primary font-extrabold">
+                    <span
+                        class="inline-flex items-center justify-center h-7 w-7 rounded bg-orange-500 text-white text-sm">Y</span>
+                    <span class="text-black/80 font-bold">Combinator</span>
+                    <span class="text-black/50 font-bold text-sm">COMPANY</span>
+                </div> -->
+
+                <div class="font-secondary text-black/70">
+                    <span id="footerYear">© Octalve 2026</span>
+                </div>
+            </div>
+
+            <!-- Center: legal links -->
+            <div class="flex items-center gap-8 font-secondary font-bold text-black/70">
+                <a href="#" class="hover:text-black">Terms of service</a>
+                <a href="#" class="hover:text-black">Privacy policy</a>
+            </div>
+
+            <!-- Right: social icons -->
+            <div class="flex items-center gap-5">
+                <!-- Facebook -->
+                <a href="#" class="text-black/70 hover:text-black" aria-label="Facebook">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                        <path
+                            d="M22 12a10 10 0 1 0-11.5 9.9v-7H8v-3h2.5V9.5C10.5 7 12 5.6 14.3 5.6c1.1 0 2.2.2 2.2.2v2.4h-1.2c-1.2 0-1.6.8-1.6 1.5V12H16l-.4 3h-1.9v7A10 10 0 0 0 22 12z" />
+                    </svg>
+                </a>
+
+                <!-- Instagram -->
+                <a href="#" class="text-black/70 hover:text-black" aria-label="Instagram">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                        <path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5Z"
+                            stroke="currentColor" stroke-width="2" />
+                        <path d="M12 16a4 4 0 1 0 0-8 4 4 0 0 0 0 8Z" stroke="currentColor" stroke-width="2" />
+                        <path d="M17.5 6.5h.01" stroke="currentColor" stroke-width="3" stroke-linecap="round" />
+                    </svg>
+                </a>
+
+                <!-- X -->
+                <a href="#" class="text-black/70 hover:text-black" aria-label="X">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                        <path
+                            d="M18.9 2H22l-6.8 7.8L23 22h-6.7l-5.2-6.8L5.1 22H2l7.4-8.6L1 2h6.9l4.7 6.1L18.9 2Zm-1.2 18h1.7L7.2 3.9H5.4L17.7 20Z" />
+                    </svg>
+                </a>
+
+                <!-- LinkedIn -->
+                <a href="#" class="text-black/70 hover:text-black" aria-label="LinkedIn">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                        <path
+                            d="M4.98 3.5A2.5 2.5 0 1 1 5 8.5a2.5 2.5 0 0 1-.02-5ZM3 21V9h4v12H3Zm7 0V9h3.8v1.7h.1c.6-1.1 2-2.2 4.1-2.2 4.4 0 5.2 2.9 5.2 6.6V21h-4v-5.1c0-1.2 0-2.8-1.7-2.8s-2 1.3-2 2.7V21h-4Z" />
+                    </svg>
+                </a>
+
+                <!-- YouTube -->
+                <a href="#" class="text-black/70 hover:text-black" aria-label="YouTube">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                        <path
+                            d="M21.6 7.2a3 3 0 0 0-2.1-2.1C17.8 4.6 12 4.6 12 4.6s-5.8 0-7.5.5A3 3 0 0 0 2.4 7.2 31.6 31.6 0 0 0 2 12a31.6 31.6 0 0 0 .4 4.8 3 3 0 0 0 2.1 2.1c1.7.5 7.5.5 7.5.5s5.8 0 7.5-.5a3 3 0 0 0 2.1-2.1A31.6 31.6 0 0 0 22 12a31.6 31.6 0 0 0-.4-4.8ZM10 15.5v-7l6 3.5-6 3.5Z" />
+                    </svg>
+                </a>
+
+                <!-- TikTok -->
+                <a href="#" class="text-black/70 hover:text-black" aria-label="TikTok">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                        <path
+                            d="M16 2h2c.3 2.6 2 4.3 4 4.6V9c-1.8-.1-3.3-.7-4.5-1.8V15a7 7 0 1 1-7-7c.4 0 .8 0 1.1.1V11a3.9 3.9 0 0 0-1.1-.2A4 4 0 1 0 15 15V2Z" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script>
+    (function () {
+        // Set year automatically (optional)
+        const y = document.getElementById("footerYear");
+        if (y) y.textContent = `© doola ${new Date().getFullYear()}`;
+
+        // Newsletter (UI only)
+        const form = document.getElementById("newsletterForm");
+        const email = document.getElementById("newsletterEmail");
+        const msg = document.getElementById("newsletterMsg");
+
+        if (!form || !email || !msg) return;
+
+        form.addEventListener("submit", (e) => {
+            e.preventDefault();
+            const v = (email.value || "").trim();
+
+            const ok = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v);
+            msg.classList.remove("hidden");
+
+            if (!ok) {
+                msg.textContent = "Please enter a valid email address.";
+                msg.classList.remove("text-green-700");
+                msg.classList.add("text-red-600");
+                return;
+            }
+
+            // Placeholder behavior — replace with your API call later
+            msg.textContent = "Subscribed (demo). Connect this to your newsletter backend.";
+            msg.classList.remove("text-red-600");
+            msg.classList.add("text-green-700");
+
+            form.reset();
+        });
+    })();
+</script>

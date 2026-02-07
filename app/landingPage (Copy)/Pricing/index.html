@@ -1,0 +1,712 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Octalve Suite™ | Home </title>
+    <link rel="icon" type="image/png" href="/brand/Octalveicon.png" />
+
+    <!-- Google Font: Barlow (page-wide) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Material Symbols (icons) -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,500,0,0" />
+
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+        :root {
+            --promo-bg: #dbe7ff;
+            --nav-bg: #fbf1c8;
+            --text: #0b1220;
+            --muted: #55627a;
+            --border: rgba(15, 23, 42, .12);
+
+            --primary: #0064E0;
+            --btn-dark: #0b0b0c;
+        }
+
+        html,
+        body {
+            font-family: "Barlow", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+            color: var(--text);
+        }
+
+        .icon {
+            font-family: "Material Symbols Rounded";
+            font-weight: 500;
+            font-style: normal;
+            line-height: 1;
+            display: inline-flex;
+            vertical-align: middle;
+        }
+
+        .soft-border {
+            border: 1px solid var(--border);
+        }
+
+        .container-max {
+            max-width: 1180px;
+        }
+    </style>
+</head>
+
+
+
+<body class="bg-white text-black">
+    <!-- HEADER INCLUDE -->
+    <div data-include="/components/header.html"></div>
+
+    <!-- PAGE CONTENT -->
+    <main>
+        <!-- Your sections go here -->
+    </main>
+
+    <!-- Include loader -->
+    <script src="/assets/include.js" defer></script>
+    <script src="/assets/layout.js" defer></script>
+
+
+    <!-- PAGE CONTENT BELOW -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Pricing (Launch / Impact / Growth) — with Price Calculation + FX conversion -->
+    <section id="pricing" class="bg-white">
+        <div class="mx-auto max-w-7xl px-5 py-14 sm:px-6 sm:py-16 lg:py-24">
+            <!-- Title -->
+            <div class="text-center">
+                <h2 class="text-3xl font-extrabold tracking-tight text-slate-900 sm:text-4xl">
+                    Plans & Pricing
+                </h2>
+                <p class="mt-3 text-base text-slate-600">
+                    Choose a suite or bundle multiple suites and get an automatic discount.
+                </p>
+            </div>
+
+            <!-- PRICE CALCULATION (Top) -->
+            <div class="mt-10 rounded-3xl bg-slate-50 p-5 ring-1 ring-black/5 sm:p-6">
+                <div class="flex flex-col gap-5 lg:flex-row lg:items-start lg:justify-between">
+                    <!-- Left: controls -->
+                    <div class="min-w-[260px]">
+                        <div class="text-sm font-extrabold text-slate-900">Price Calculation</div>
+                        <div class="mt-1 text-xs text-slate-600">
+                            Bundle two or more suites to get <span class="font-bold text-slate-900">15% off</span> each
+                            additional suite.
+                        </div>
+
+                        <!-- Currency display -->
+                        <div class="mt-4">
+                            <label class="text-xs font-bold text-slate-700">Show conversion</label>
+                            <select id="fxSelect"
+                                class="mt-2 w-full rounded-xl border border-slate-200 bg-white px-3 py-2 text-sm font-semibold text-slate-900 outline-none focus:ring-4 focus:ring-slate-200">
+                                <option value="NONE">None (NGN only)</option>
+                                <option value="USD">USD</option>
+                                <option value="EUR">EUR</option>
+                            </select>
+
+                            <div id="fxMeta" class="mt-2 text-[11px] text-slate-500">
+                                Loading live rates…
+                            </div>
+                        </div>
+
+                        <!-- Bundle chooser -->
+                        <div class="mt-5 space-y-3">
+                            <label
+                                class="flex items-center justify-between gap-3 rounded-2xl bg-white p-3 ring-1 ring-black/5">
+                                <span class="flex items-center gap-3">
+                                    <span class="h-3 w-3 rounded-full bg-red-600"></span>
+                                    <span class="text-sm font-extrabold text-slate-900">Launch Suite</span>
+                                </span>
+                                <input data-bundle="launch" type="checkbox"
+                                    class="h-5 w-5 rounded border-slate-300 text-slate-900" />
+                            </label>
+
+                            <label
+                                class="flex items-center justify-between gap-3 rounded-2xl bg-white p-3 ring-1 ring-black/5">
+                                <span class="flex items-center gap-3">
+                                    <span class="h-3 w-3 rounded-full bg-green-600"></span>
+                                    <span class="text-sm font-extrabold text-slate-900">Impact Suite</span>
+                                </span>
+                                <input data-bundle="impact" type="checkbox"
+                                    class="h-5 w-5 rounded border-slate-300 text-slate-900" />
+                            </label>
+
+                            <label
+                                class="flex items-center justify-between gap-3 rounded-2xl bg-white p-3 ring-1 ring-black/5">
+                                <span class="flex items-center gap-3">
+                                    <span class="h-3 w-3 rounded-full bg-blue-600"></span>
+                                    <span class="text-sm font-extrabold text-slate-900">Growth Suite</span>
+                                </span>
+                                <input data-bundle="growth" type="checkbox"
+                                    class="h-5 w-5 rounded border-slate-300 text-slate-900" />
+                            </label>
+
+                            <div class="rounded-2xl bg-white p-3 text-[12px] text-slate-600 ring-1 ring-black/5">
+                                Note: <span class="font-bold text-slate-900">Growth Suite is monthly</span>. Bundle
+                                totals
+                                treat Growth as the first month only.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right: summary -->
+                    <div class="w-full rounded-3xl bg-white p-5 ring-1 ring-black/5 sm:p-6 lg:max-w-3xl">
+                        <div class="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
+                            <div>
+                                <div class="text-sm font-extrabold text-slate-900">Instant Quote</div>
+                                <div class="mt-1 text-xs text-slate-600">
+                                    Select suites on the left to see the total immediately.
+                                </div>
+                            </div>
+                            <div class="text-right text-xs text-slate-500">
+                                <div class="font-semibold">Discount rule:</div>
+                                <div>15% off every additional suite</div>
+                            </div>
+                        </div>
+
+                        <div class="mt-6 grid gap-4 sm:grid-cols-3">
+                            <div class="rounded-2xl bg-slate-50 p-4 ring-1 ring-black/5">
+                                <div class="text-xs font-bold text-slate-600">Subtotal</div>
+                                <div id="subTotalNGN" class="mt-1 text-lg font-extrabold text-slate-900">₦0</div>
+                                <div id="subTotalFX" class="mt-1 text-xs font-semibold text-slate-500 hidden"></div>
+                            </div>
+
+                            <div class="rounded-2xl bg-slate-50 p-4 ring-1 ring-black/5">
+                                <div class="text-xs font-bold text-slate-600">Bundle Discount</div>
+                                <div id="discountNGN" class="mt-1 text-lg font-extrabold text-slate-900">₦0</div>
+                                <div id="discountFX" class="mt-1 text-xs font-semibold text-slate-500 hidden"></div>
+                            </div>
+
+                            <div class="rounded-2xl bg-slate-900 p-4 ring-1 ring-black/10">
+                                <div class="text-xs font-bold text-white/70">Total</div>
+                                <div id="totalNGN" class="mt-1 text-2xl font-extrabold text-white">₦0</div>
+                                <div id="totalFX" class="mt-1 text-xs font-semibold text-white/70 hidden"></div>
+                            </div>
+                        </div>
+
+                        <div id="selectedNote" class="mt-5 text-sm font-semibold text-slate-700">
+                            No suite selected yet.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- DESKTOP HEADER (plans) -->
+            <div class="mt-12 hidden lg:block">
+                <div
+                    class="overflow-hidden rounded-3xl bg-white shadow-[0_15px_70px_rgba(0,0,0,0.06)] ring-1 ring-black/5">
+                    <div class="overflow-x-auto">
+                        <table class="w-full min-w-[980px] border-separate border-spacing-0">
+                            <thead>
+                                <tr class="bg-white">
+                                    <th class="w-[44%] px-8 py-8 text-left align-top">
+                                        <div class="text-sm font-semibold text-slate-500">Compare features</div>
+                                    </th>
+
+                                    <!-- Launch -->
+                                    <th class="w-[18.66%] px-6 py-8 text-center align-top">
+                                        <div class="mx-auto max-w-[240px]">
+                                            <div class="text-sm font-extrabold text-slate-900">Launch Suite</div>
+                                            <div class="mt-2 text-2xl font-extrabold text-slate-900">
+                                                <span class="planPrice" data-plan-price="launch"></span>
+                                                <span class="text-sm font-semibold text-slate-500">/ one-time</span>
+                                            </div>
+                                            <div class="mt-1 text-xs font-semibold text-slate-500 planFx hidden"
+                                                data-plan-fx="launch"></div>
+
+                                            <a href="/contact/"
+                                                class="mt-4 inline-flex w-full items-center justify-center gap-2 rounded-full bg-red-600 px-5 py-2.5 text-sm font-bold text-white shadow-sm hover:bg-red-700">
+                                                Choose Plan <span aria-hidden="true">›</span>
+                                            </a>
+                                        </div>
+                                    </th>
+
+                                    <!-- Impact -->
+                                    <th class="w-[18.66%] px-6 py-8 text-center align-top">
+                                        <div class="mx-auto max-w-[240px]">
+                                            <div class="text-sm font-extrabold text-slate-900">Impact Suite</div>
+                                            <div class="mt-2 text-2xl font-extrabold text-slate-900">
+                                                <span class="planPrice" data-plan-price="impact"></span>
+                                                <span class="text-sm font-semibold text-slate-500">/ one-time</span>
+                                            </div>
+                                            <div class="mt-1 text-xs font-semibold text-slate-500 planFx hidden"
+                                                data-plan-fx="impact"></div>
+
+                                            <a href="/contact/"
+                                                class="mt-4 inline-flex w-full items-center justify-center gap-2 rounded-full bg-green-600 px-5 py-2.5 text-sm font-bold text-white shadow-sm hover:bg-green-700">
+                                                Choose Plan <span aria-hidden="true">›</span>
+                                            </a>
+                                        </div>
+                                    </th>
+
+                                    <!-- Growth -->
+                                    <th class="w-[18.66%] px-6 py-8 text-center align-top">
+                                        <div class="mx-auto max-w-[240px]">
+                                            <div class="text-sm font-extrabold text-slate-900">Growth Suite</div>
+                                            <div class="mt-2 text-2xl font-extrabold text-slate-900">
+                                                <span class="planPrice" data-plan-price="growth"></span>
+                                                <span class="text-sm font-semibold text-slate-500">/ month</span>
+                                            </div>
+                                            <div class="mt-1 text-xs font-semibold text-slate-500 planFx hidden"
+                                                data-plan-fx="growth"></div>
+
+                                            <a href="/contact/"
+                                                class="mt-4 inline-flex w-full items-center justify-center gap-2 rounded-full bg-blue-600 px-5 py-2.5 text-sm font-bold text-white shadow-sm hover:bg-blue-700">
+                                                Choose Plan <span aria-hidden="true">›</span>
+                                            </a>
+                                        </div>
+                                    </th>
+                                </tr>
+                            </thead>
+
+                            <tbody id="compareBody"></tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <!-- MOBILE VIEW (tabs + stack) -->
+            <div class="mt-12 lg:hidden">
+                <div class="rounded-3xl bg-white p-5 shadow-[0_15px_60px_rgba(0,0,0,0.06)] ring-1 ring-black/5">
+                    <div class="flex items-center justify-center gap-2 rounded-2xl bg-slate-50 p-2 ring-1 ring-black/5">
+                        <button class="mTab rounded-xl px-4 py-2 text-sm font-extrabold" data-mtab="launch"
+                            aria-selected="true">Launch</button>
+                        <button class="mTab rounded-xl px-4 py-2 text-sm font-extrabold" data-mtab="impact"
+                            aria-selected="false">Impact</button>
+                        <button class="mTab rounded-xl px-4 py-2 text-sm font-extrabold" data-mtab="growth"
+                            aria-selected="false">Growth</button>
+                    </div>
+
+                    <div class="mt-6">
+                        <div class="flex items-start justify-between gap-4">
+                            <div>
+                                <div id="mName" class="text-lg font-extrabold text-slate-900">Launch Suite</div>
+                                <div class="mt-1 text-sm font-semibold text-slate-600">
+                                    <span id="mPrice"></span>
+                                    <span id="mPeriod" class="text-slate-500"></span>
+                                </div>
+                                <div id="mFx" class="mt-1 text-xs font-semibold text-slate-500 hidden"></div>
+                            </div>
+
+                            <a id="mCta" href="/contact/"
+                                class="inline-flex items-center justify-center rounded-full bg-black px-5 py-2.5 text-sm font-extrabold text-white hover:opacity-90">
+                                Choose Plan
+                            </a>
+                        </div>
+
+                        <div id="mobileFeatures" class="mt-6 space-y-4"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        (function () {
+            // =========================================================
+            // ADMIN PRICES (EDIT ONLY HERE) — NGN (Abuja-appropriate)
+            // Rationale:
+            // - Professional multi-page websites often sit in ~₦450k–₦700k+ ranges, with premium work higher. :contentReference[oaicite:2]{index=2}
+            // - Social media management retainers commonly land ~₦100k–₦500k/month depending scope. :contentReference[oaicite:3]{index=3}
+            // These suites bundle strategy + brand + web + integrations + assets, hence the totals.
+            // =========================================================
+            const PRICES_NGN = {
+                launch: 450000,  // ₦1.5m (one-time)
+                impact: 470000,  // ₦2.0m (one-time)
+                growth: 200000,   // ₦300k/month (retainer base)
+            };
+
+            const PLANS = {
+                launch: { name: "Launch Suite", color: "red", periodLabel: "one-time", cta: "/contact/" },
+                impact: { name: "Impact Suite", color: "green", periodLabel: "one-time", cta: "/contact/" },
+                growth: { name: "Growth Suite", color: "blue", periodLabel: "month", cta: "/contact/" },
+            };
+
+            // =========================================================
+            // Live FX (NGN -> USD/EUR)
+            // Note: Browsers cannot reliably pull “Google FX” directly.
+            // This uses a live public FX endpoint; fallback uses Wise-rate-based approximations. :contentReference[oaicite:4]{index=4}
+            // =========================================================
+            const FX_API = "https://open.er-api.com/v6/latest/NGN"; // base NGN
+            const FALLBACK = {
+                USD: 1 / 1468.71,   // from Wise example
+                EUR: 1 / 1709.55,   // from Wise example
+            };
+
+            let fx = { USD: FALLBACK.USD, EUR: FALLBACK.EUR, updated: "fallback" };
+            let fxMode = "NONE"; // NONE | USD | EUR
+
+            // =========================================================
+            // Feature Sections (comparison)
+            // =========================================================
+            const sections = [
+                {
+                    title: "Strategy & Brand",
+                    rows: [
+                        { label: "Discovery / Strategy (Phase 1)", launch: true, impact: true, growth: true, info: "Positioning, audience, roadmap." },
+                        { label: "Brand Identity (Phase 2)", launch: true, impact: true, growth: true, info: "Logo suite + colors + typography." },
+                        { label: "Mini Brand Guideline", launch: true, impact: true, growth: true },
+                        { label: "Social Profile Kit (DP + banners + templates)", launch: true, impact: false, growth: true },
+                        { label: "Letterhead + ID card/badge", launch: false, impact: true, growth: false },
+                    ],
+                },
+                {
+                    title: "Website & Integrations",
+                    rows: [
+                        { label: "Website Design & Build (Mobile-first)", launch: true, impact: true, growth: true },
+                        { label: "Basic SEO + Speed Setup", launch: true, impact: true, growth: true },
+                        { label: "WhatsApp click-to-chat + Forms + Map embed", launch: true, impact: true, growth: true },
+                        { label: "Donation-friendly website structure", launch: false, impact: true, growth: false },
+                        { label: "Recurring donation option + donor email copy", launch: false, impact: true, growth: false },
+                    ],
+                },
+                {
+                    title: "Content & Launch Support",
+                    rows: [
+                        { label: "14 branded post designs (starter pack)", launch: true, impact: false, growth: false },
+                        { label: "5 story templates + ad-ready creatives", launch: true, impact: false, growth: false },
+                        { label: "Caption prompts + posting plan", launch: true, impact: false, growth: true, info: "Growth includes ongoing prompts via retainer." },
+                        { label: "Go-live support + tracking guidance", launch: true, impact: true, growth: true },
+                        { label: "Handoff (assets + usage guide)", launch: true, impact: true, growth: true },
+                    ],
+                },
+                {
+                    title: "Payments & Impact (Impact Suite)",
+                    rows: [
+                        { label: "Payment Integration (Paystack/Flutterwave/PayPal)", launch: false, impact: true, growth: true },
+                        { label: "Proof of payment flow (simple form)", launch: false, impact: true, growth: true },
+                        { label: "Donation tracking sheet template", launch: false, impact: true, growth: true },
+                        { label: "Impact report template (monthly/quarterly)", launch: false, impact: true, growth: false },
+                        { label: "Volunteer signup form + database capture", launch: false, impact: true, growth: true },
+                        { label: "Newsletter integration basics (Mailchimp/Brevo)", launch: false, impact: true, growth: true },
+                    ],
+                },
+                {
+                    title: "Growth Subscription (Monthly Retainer)",
+                    rows: [
+                        { label: "Monthly design delivery (8–16 designs)", launch: false, impact: false, growth: true },
+                        { label: "Monthly strategy call (30 mins)", launch: false, impact: false, growth: true },
+                        { label: "Website updates per month (2–6 changes)", launch: false, impact: false, growth: true },
+                        { label: "Monthly performance snapshot/report", launch: false, impact: false, growth: true },
+                        { label: "Ads add-on support (separate spend)", launch: false, impact: false, growth: true },
+                    ],
+                },
+            ];
+
+            // =========================================================
+            // UI helpers
+            // =========================================================
+            function formatNGN(amount) {
+                return new Intl.NumberFormat("en-NG", { style: "currency", currency: "NGN", maximumFractionDigits: 0 }).format(amount);
+            }
+            function formatFX(amount, cur) {
+                const locale = cur === "EUR" ? "de-DE" : "en-US";
+                return new Intl.NumberFormat(locale, { style: "currency", currency: cur, maximumFractionDigits: 0 }).format(amount);
+            }
+            function convert(amountNGN, cur) {
+                if (cur === "USD") return amountNGN * fx.USD;
+                if (cur === "EUR") return amountNGN * fx.EUR;
+                return null;
+            }
+
+            const iconYes = (color) => {
+                const map = { red: "#dc2626", green: "#16a34a", blue: "#2563eb" };
+                const stroke = map[color] || "#16a34a";
+                return `
+        <span class="inline-flex h-7 w-7 items-center justify-center rounded-full bg-white">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M20 6L9 17l-5-5" stroke="${stroke}" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </span>
+      `;
+            };
+
+            const iconNo = () => `
+      <span class="inline-flex h-7 w-7 items-center justify-center rounded-full bg-white">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M18 6L6 18" stroke="#f97316" stroke-width="2.6" stroke-linecap="round"/>
+          <path d="M6 6l12 12" stroke="#f97316" stroke-width="2.6" stroke-linecap="round"/>
+        </svg>
+      </span>
+    `;
+
+            // =========================================================
+            // Render desktop compare body
+            // =========================================================
+            const compareBody = document.getElementById("compareBody");
+            if (compareBody) {
+                const rowsHtml = [];
+                sections.forEach((sec) => {
+                    rowsHtml.push(`
+          <tr>
+            <td colspan="4" class="bg-slate-50 px-8 py-4 text-sm font-extrabold text-slate-900">${sec.title}</td>
+          </tr>
+        `);
+
+                    sec.rows.forEach((r) => {
+                        rowsHtml.push(`
+            <tr class="border-t border-slate-200/70">
+              <td class="px-8 py-5 text-sm font-semibold text-slate-800">${r.label}</td>
+              <td class="px-6 py-5 text-center">${r.launch ? iconYes(PLANS.launch.color) : iconNo()}</td>
+              <td class="px-6 py-5 text-center">${r.impact ? iconYes(PLANS.impact.color) : iconNo()}</td>
+              <td class="px-6 py-5 text-center">${r.growth ? iconYes(PLANS.growth.color) : iconNo()}</td>
+            </tr>
+          `);
+                    });
+                });
+                compareBody.innerHTML = rowsHtml.join("");
+            }
+
+            // =========================================================
+            // Plan price display (desktop + mobile)
+            // =========================================================
+            function paintPlanPrices() {
+                document.querySelectorAll(".planPrice").forEach((el) => {
+                    const key = el.getAttribute("data-plan-price");
+                    el.textContent = formatNGN(PRICES_NGN[key] || 0);
+                });
+
+                document.querySelectorAll(".planFx").forEach((el) => {
+                    const key = el.getAttribute("data-plan-fx");
+                    if (fxMode === "NONE") {
+                        el.classList.add("hidden");
+                        el.textContent = "";
+                        return;
+                    }
+                    const val = convert(PRICES_NGN[key] || 0, fxMode);
+                    el.classList.remove("hidden");
+                    el.textContent = "≈ " + formatFX(val || 0, fxMode);
+                });
+
+                // Mobile header repaint
+                paintMobileActive();
+            }
+
+            // =========================================================
+            // Price Calculation logic (15% off additional suites)
+            // - We discount every selected suite except the most expensive one (maximizes value).
+            // =========================================================
+            const bundleChecks = Array.from(document.querySelectorAll("[data-bundle]"));
+            const subTotalNGN = document.getElementById("subTotalNGN");
+            const discountNGN = document.getElementById("discountNGN");
+            const totalNGN = document.getElementById("totalNGN");
+            const subTotalFX = document.getElementById("subTotalFX");
+            const discountFX = document.getElementById("discountFX");
+            const totalFX = document.getElementById("totalFX");
+            const selectedNote = document.getElementById("selectedNote");
+
+            function calcAndPaint() {
+                const selected = bundleChecks.filter(c => c.checked).map(c => c.getAttribute("data-bundle"));
+                if (selected.length === 0) {
+                    subTotalNGN.textContent = "₦0";
+                    discountNGN.textContent = "₦0";
+                    totalNGN.textContent = "₦0";
+                    selectedNote.textContent = "No suite selected yet.";
+                    [subTotalFX, discountFX, totalFX].forEach(x => x.classList.add("hidden"));
+                    return;
+                }
+
+                const amounts = selected.map(k => ({ k, v: PRICES_NGN[k] || 0 }));
+                const subtotal = amounts.reduce((a, b) => a + b.v, 0);
+
+                // Discount: 15% on all except the highest priced
+                const sorted = amounts.slice().sort((a, b) => b.v - a.v);
+                const discounted = sorted.slice(1); // everything except highest
+                const discount = discounted.reduce((a, b) => a + (b.v * 0.15), 0);
+                const total = subtotal - discount;
+
+                subTotalNGN.textContent = formatNGN(subtotal);
+                discountNGN.textContent = formatNGN(discount);
+                totalNGN.textContent = formatNGN(total);
+
+                selectedNote.textContent =
+                    selected.length === 1
+                        ? `Selected: ${PLANS[selected[0]].name}`
+                        : `Selected: ${selected.map(k => PLANS[k].name).join(" + ")} (15% off each additional suite)`;
+
+                // FX display
+                if (fxMode === "NONE") {
+                    [subTotalFX, discountFX, totalFX].forEach(x => x.classList.add("hidden"));
+                } else {
+                    const fxSub = convert(subtotal, fxMode);
+                    const fxDis = convert(discount, fxMode);
+                    const fxTot = convert(total, fxMode);
+
+                    subTotalFX.textContent = "≈ " + formatFX(fxSub || 0, fxMode);
+                    discountFX.textContent = "≈ " + formatFX(fxDis || 0, fxMode);
+                    totalFX.textContent = "≈ " + formatFX(fxTot || 0, fxMode);
+
+                    [subTotalFX, discountFX, totalFX].forEach(x => x.classList.remove("hidden"));
+                }
+            }
+
+            bundleChecks.forEach((c) => c.addEventListener("change", calcAndPaint));
+
+            // =========================================================
+            // Mobile tabs
+            // =========================================================
+            const mTabs = Array.from(document.querySelectorAll(".mTab"));
+            const mName = document.getElementById("mName");
+            const mPrice = document.getElementById("mPrice");
+            const mPeriod = document.getElementById("mPeriod");
+            const mFx = document.getElementById("mFx");
+            const mCta = document.getElementById("mCta");
+            const mobileFeatures = document.getElementById("mobileFeatures");
+
+            function activeMobileKey() {
+                return document.querySelector(".mTab[aria-selected='true']")?.getAttribute("data-mtab") || "launch";
+            }
+
+            function setMobileTabStyles() {
+                mTabs.forEach((t) => {
+                    const selected = t.getAttribute("aria-selected") === "true";
+                    t.classList.toggle("bg-white", selected);
+                    t.classList.toggle("shadow-sm", selected);
+                    t.classList.toggle("ring-1", selected);
+                    t.classList.toggle("ring-black/5", selected);
+                    t.classList.toggle("text-slate-900", selected);
+                    t.classList.toggle("text-slate-600", !selected);
+                });
+            }
+
+            function renderMobileFeatures(planKey) {
+                if (!mobileFeatures) return;
+                const p = PLANS[planKey];
+
+                const html = sections.map((sec) => {
+                    const items = sec.rows.map((r) => {
+                        const included = !!r[planKey];
+                        return `
+            <li class="flex gap-3">
+              <div class="pt-0.5">${included ? iconYes(p.color) : iconNo()}</div>
+              <div class="text-sm font-semibold text-slate-800">${r.label}</div>
+            </li>
+          `;
+                    }).join("");
+
+                    return `
+          <div class="rounded-2xl bg-slate-50 p-4 ring-1 ring-black/5">
+            <div class="text-sm font-extrabold text-slate-900">${sec.title}</div>
+            <ul class="mt-4 space-y-3">${items}</ul>
+          </div>
+        `;
+                }).join("");
+
+                mobileFeatures.innerHTML = html;
+            }
+
+            function paintMobileActive() {
+                const key = activeMobileKey();
+                const p = PLANS[key];
+
+                mName.textContent = p.name;
+                mPrice.textContent = formatNGN(PRICES_NGN[key] || 0);
+                mPeriod.textContent = " / " + p.periodLabel;
+                mCta.setAttribute("href", p.cta);
+
+                if (fxMode === "NONE") {
+                    mFx.classList.add("hidden");
+                    mFx.textContent = "";
+                } else {
+                    const val = convert(PRICES_NGN[key] || 0, fxMode);
+                    mFx.classList.remove("hidden");
+                    mFx.textContent = "≈ " + formatFX(val || 0, fxMode);
+                }
+
+                renderMobileFeatures(key);
+            }
+
+            mTabs.forEach((t) => {
+                t.addEventListener("click", () => {
+                    mTabs.forEach(x => x.setAttribute("aria-selected", "false"));
+                    t.setAttribute("aria-selected", "true");
+                    setMobileTabStyles();
+                    paintMobileActive();
+                });
+            });
+
+            // =========================================================
+            // FX select
+            // =========================================================
+            const fxSelect = document.getElementById("fxSelect");
+            const fxMeta = document.getElementById("fxMeta");
+
+            fxSelect.addEventListener("change", () => {
+                fxMode = fxSelect.value;
+                paintPlanPrices();
+                paintMobileActive();
+                calcAndPaint();
+            });
+
+            async function loadFx() {
+                try {
+                    const res = await fetch(FX_API, { cache: "no-store" });
+                    const data = await res.json();
+                    if (data && data.result === "success" && data.rates) {
+                        // rates are in terms of 1 NGN -> currency
+                        fx.USD = data.rates.USD;
+                        fx.EUR = data.rates.EUR;
+                        fx.updated = new Date().toLocaleString();
+                        fxMeta.textContent = `Live rates loaded (${fx.updated}).`;
+                    } else {
+                        fxMeta.textContent = "Live rates unavailable. Using fallback rates.";
+                    }
+                } catch (e) {
+                    fxMeta.textContent = "Live rates unavailable. Using fallback rates.";
+                }
+
+                paintPlanPrices();
+                paintMobileActive();
+                calcAndPaint();
+            }
+
+            // Initial
+            setMobileTabStyles();
+            paintPlanPrices();
+            paintMobileActive();
+            calcAndPaint();
+            loadFx();
+        })();
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- FOOTER SECTION -->
+
+    <div data-include="/components/footer.html"></div>
+
+</body>
+
+</html>
