@@ -74,7 +74,7 @@ export default function LandingFooter() {
                     {/* Brand */}
                     <div className="lg:col-span-6">
                         <Link href="/" className="inline-flex items-center gap-3">
-                            <Image src="/brand/logo/Octalve Suite.png" alt="Logo" width={180} height={40} className="h-10 w-auto object-contain" />
+                            <Image src="/brand/logo/Octalve Suite.png" alt="Logo" width={180} height={40} className="h-10 w-auto object-contain" style={{ width: "auto" }} />
                         </Link>
 
                         <p className="mt-6 max-w-xl text-black/70 leading-relaxed font-secondary">

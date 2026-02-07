@@ -65,6 +65,7 @@ export default function LandingHeader() {
                                 width={100}
                                 height={40}
                                 className="h-10 w-auto object-contain"
+                                style={{ width: "auto" }}
                             />
                         </div>
 
@@ -133,6 +134,7 @@ export default function LandingHeader() {
                                 width={180}
                                 height={36}
                                 className="h-9 w-auto object-contain transition-all duration-200"
+                                style={{ width: "auto" }}
                             />
                         </Link>
 

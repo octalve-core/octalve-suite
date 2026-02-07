@@ -38,9 +38,12 @@
     "react": "19.0.0",
     "react-dom": "19.0.0",
     "recharts": "^3.6.0",
-    "tailwind-merge": "^2.5.5"
+    "tailwind-merge": "^2.5.5",
+    "tailwindcss-animate": "^1.0.7"
   },
   "devDependencies": {
+    "@types/node": "25.0.10",
+    "@types/react": "19.2.10",
     "autoprefixer": "^10.4.20",
     "postcss": "^8.4.49",
     "prisma": "^6.0.0",

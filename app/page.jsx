@@ -113,14 +113,14 @@ export default function HomePage() {
                                         <div className="p-4 grid gap-3">
                                             <div className="rounded-2xl bg-slate-50 soft-border px-4 py-3 flex items-center justify-between">
                                                 <div className="flex items-center gap-3">
-                                                    <Image src="/brand/Octalveicon.png" alt="logo" width={24} height={24} />
+                                                    <Image src="/brand/Octalveicon.png" alt="logo" width={24} height={24} style={{ height: "auto" }} />
                                                     <div className="text-sm font-semibold">Total Orders</div>
                                                 </div>
                                                 <div className="text-sm font-extrabold text-black/60">200</div>
                                             </div>
                                             <div className="rounded-2xl bg-slate-50 soft-border px-4 py-3 flex items-center justify-between">
                                                 <div className="flex items-center gap-3">
-                                                    <Image src="/brand/Octalveicon.png" alt="logo" width={24} height={24} />
+                                                    <Image src="/brand/Octalveicon.png" alt="logo" width={24} height={24} style={{ height: "auto" }} />
                                                     <div className="text-sm font-semibold">Total Clients</div>
                                                 </div>
                                                 <div className="text-sm font-extrabold text-black/60">150</div>
@@ -133,7 +133,7 @@ export default function HomePage() {
                                 <div className="relative z-10 pt-10 md:pt-12">
                                     <div className="ml-auto w-[340px] h-[340px] md:w-[420px] md:h-[420px] rounded-[50px] overflow-hidden relative">
                                         <div className="absolute inset-0 rounded-full border-2 border-black/15" aria-hidden="true"></div>
-                                        <Image src="/brand/Octalvesuiteihero.png" alt="Octalve Suite Hero" fill className="object-cover" />
+                                        <Image src="/brand/Octalvesuiteihero.png" alt="Octalve Suite Hero" fill className="object-cover" priority sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 420px" />
                                     </div>
                                     <div className="absolute right-10 md:right-16 bottom-6 md:bottom-10 z-30">
                                         <div className="rounded-2xl bg-[#f4efcc] soft-border px-5 py-4 shadow-sm">
@@ -151,10 +151,10 @@ export default function HomePage() {
                                 <div className="flex flex-col lg:flex-row items-center justify-between gap-6">
                                     <div className="text-xl md:text-2xl font-extrabold">Backed By The Best</div>
                                     <div className="flex flex-wrap items-center justify-center gap-x-10 gap-y-4">
-                                        <Image height={32} width={100} className="h-8 w-auto object-contain opacity-90" src="/brand/logo/Octalve Cloud Logo.png" alt="Logo" />
-                                        <Image height={32} width={100} className="h-8 w-auto object-contain opacity-90" src="/brand/logo/Octalve Consult.png" alt="Logo" />
-                                        <Image height={32} width={100} className="h-8 w-auto object-contain opacity-90" src="/brand/logo/Octalve Lab.png" alt="Logo" />
-                                        <Image height={32} width={100} className="h-8 w-auto object-contain opacity-90" src="/brand/logo/Octalve Vault Logo.png" alt="Logo" />
+                                        <Image height={32} width={100} className="h-8 w-auto object-contain opacity-90" src="/brand/logo/Octalve Cloud Logo.png" alt="Logo" style={{ width: "auto" }} />
+                                        <Image height={32} width={100} className="h-8 w-auto object-contain opacity-90" src="/brand/logo/Octalve Consult.png" alt="Logo" style={{ width: "auto" }} />
+                                        <Image height={32} width={100} className="h-8 w-auto object-contain opacity-90" src="/brand/logo/Octalve Lab.png" alt="Logo" style={{ width: "auto" }} />
+                                        <Image height={32} width={100} className="h-8 w-auto object-contain opacity-90" src="/brand/logo/Octalve Vault Logo.png" alt="Logo" style={{ width: "auto" }} />
                                     </div>
                                 </div>
                             </div>
