@@ -5,11 +5,13 @@ export async function GET(request) {
     const { searchParams } = new URL(request.url);
     const projectId = searchParams.get("project_id");
     const phaseId = searchParams.get("phase_id");
+    const messageType = searchParams.get("message_type");
 
     try {
         const where = {};
         if (projectId) where.projectId = projectId;
         if (phaseId) where.phaseId = phaseId;
+        if (messageType) where.messageType = messageType;
 
         const messages = await prisma.message.findMany({
             where,

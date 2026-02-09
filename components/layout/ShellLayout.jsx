@@ -35,10 +35,10 @@ import {
 } from "@/components/ui/dropdown-menu";
 
 const dummyUser = {
-    full_name: "John Doe",
-    email: "john.doe@example.com",
-    role: "admin",
-}
+  full_name: "John Doe",
+  email: "john.doe@example.com",
+  role: "admin",
+};
 
 export function ShellLayout({ children, mode = "auto" }) {
   const [sidebarOpen, setSidebarOpen] = useState(false);
@@ -48,21 +48,21 @@ export function ShellLayout({ children, mode = "auto" }) {
   const pathname = usePathname();
 
   useEffect(() => {
-      const loadUser = async () => {
-          try {
-              // const userData = await api.auth.me();
-              setTimeout(() => {
-                  setLoading(false);
-              }, 1000);
-              // setUser(userData);
-          } catch (e) {
-              console.log("User not logged in");
-              router.replace("/login");
-          } finally {
-              setLoading(false);
-          }
-      };
-      loadUser();
+    const loadUser = async () => {
+      try {
+        // const userData = await api.auth.me();
+        setTimeout(() => {
+          setLoading(false);
+        }, 1000);
+        // setUser(userData);
+      } catch (e) {
+        console.log("User not logged in");
+        router.replace("/login");
+      } finally {
+        setLoading(false);
+      }
+    };
+    loadUser();
   }, [router]);
 
   const isOctalve =
@@ -76,25 +76,25 @@ export function ShellLayout({ children, mode = "auto" }) {
 
   const clientNavItems = [
     { name: "Dashboard", icon: LayoutDashboard, href: "/dashboard" },
-    { name: "Projects", icon: FolderKanban, href: "/project" },
-    { name: "Phases", icon: Layers, href: "/phases" },
+    { name: "Projects", icon: FolderKanban, href: "/dashboard/project" },
+    { name: "Phases", icon: Layers, href: "/dashboard/phases" },
     {
       name: "Approvals",
       icon: CheckSquare,
-      href: "/approvals",
+      href: "/dashboard/approvals",
       badge: pendingApprovals.length,
     },
-    { name: "Support", icon: HelpCircle, href: "/support" },
+    { name: "Support", icon: HelpCircle, href: "/dashboard/support" },
   ];
 
   const octalveNavItems = [
-    { name: "Overview", icon: LayoutDashboard, href: "/overview" },
-    { name: "Projects", icon: FolderKanban, href: "/projects" },
-    { name: "Clients", icon: Users, href: "/clients" },
-    { name: "Templates", icon: FileText, href: "/templates" },
-    { name: "Team", icon: Users, href: "/team" },
-    { name: "Analytics", icon: BarChart3, href: "/analytics" },
-    { name: "Settings", icon: Settings, href: "/settings" },
+    { name: "Overview", icon: LayoutDashboard, href: "/admin" },
+    { name: "Projects", icon: FolderKanban, href: "/admin/projects" },
+    { name: "Clients", icon: Users, href: "/admin/clients" },
+    { name: "Templates", icon: FileText, href: "/admin/templates" },
+    { name: "Team", icon: Users, href: "/admin/team" },
+    { name: "Analytics", icon: BarChart3, href: "/admin/analytics" },
+    { name: "Settings", icon: Settings, href: "/admin/settings" },
   ];
 
   const navItems = isOctalve ? octalveNavItems : clientNavItems;
@@ -175,7 +175,7 @@ export function ShellLayout({ children, mode = "auto" }) {
           {isOctalve && (
             <div className="px-4 py-4">
               <Button
-                onClick={() => router.push("/projects/new")}
+                onClick={() => router.push("/admin/projects/new")}
                 className="w-full bg-gradient-to-r from-violet-600 to-indigo-600 hover:from-violet-700 hover:to-indigo-700 shadow-lg shadow-violet-200"
               >
                 <Plus className="w-4 h-4 mr-2" />
@@ -271,7 +271,7 @@ export function ShellLayout({ children, mode = "auto" }) {
               <Button
                 variant="outline"
                 size="sm"
-                onClick={() => router.push("/approvals")}
+                onClick={() => router.push("/dashboard/approvals")}
                 className="border-violet-200 text-violet-700 hover:bg-violet-50"
               >
                 <CheckSquare className="w-4 h-4 mr-2" />
