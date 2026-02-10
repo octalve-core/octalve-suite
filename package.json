@@ -4,12 +4,18 @@
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",
-    "build": "prisma generate && next build",
     "start": "next start",
-    "db:generate": "prisma generate",
-    "db:push": "prisma db push",
-    "db:seed": "prisma db seed",
-    "db:studio": "prisma studio"
+    "build": "npx prisma generate && next build",
+    "build-dev": "npx prisma generate && npx prisma db push && next build",
+    "postbuild": "next-sitemap",
+    "lint": "next lint",
+    "prisma:generate": "npx prisma generate",
+    "prisma:push": "npx prisma db push",
+    "prisma:studio": "npx prisma studio",
+    "prisma:accept-data-loss": "npx prisma db push --accept-data-loss",
+    "prisma:create-only": "npx prisma migrate dev --create-only",
+    "prisma:check": "npx prisma migrate diff --from-schema-datasource prisma/schema.prisma --to-schema-datasource prisma/schema.prisma --script"
+
   },
   "prisma": {
     "seed": "node prisma/seed.js"
